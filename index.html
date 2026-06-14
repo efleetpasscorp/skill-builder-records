@@ -84,7 +84,7 @@ const COMP=[
 ];
 const KPI=[['16','Scheduled runs'],['13','Genuine lessons'],['3','Hypothesis studies'],['3','Sprints (weeks)'],['2','Null/advisory'],['1','Partial']];
 
-const tabs=['Overview','Curriculum','Hypothesis Studies','Task Board','Compliance','Architecture','Integrity'];
+const tabs=['Overview','Curriculum','Hypothesis Studies','Task Board','Compliance','Connectors','Architecture','Integrity'];
 let cur='Overview';
 const nav=document.getElementById('nav'),main=document.getElementById('main');
 tabs.forEach(t=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{cur=t;render()};nav.appendChild(b)});
@@ -163,9 +163,111 @@ function render(){
    '<tr><td>Sync</td><td><code>php artisan rd-agent:sync-ato</code> (weekly)</td></tr>'+
    '</table><div class="foot">Located from ato.gov.au 2026-06-15. Eligibility floor: notional deductions ≥ $20,000. Not tax advice.</div></div>';
  }
+
+ else if(cur==='Connectors'){
+   h+=buildConnectorsHTML();
+ }
  main.innerHTML=h;
+ if(cur==='Connectors'&&window.initConnectors) initConnectors();
 }
 render();
+</script>
+
+<script>
+const CONN=[
+ {key:'task',name:'Task management',lane:'task-board',providers:['Trello','Jira','Asana','ClickUp','Monday','Linear'],hint:'Boards, cards & sprints → Kanban'},
+ {key:'timesheet',name:'Timesheet control',lane:'timesheets',providers:['Harvest','Clockify','Toggl','QuickBooks Time'],hint:'Effort evidence for R&D expenditure'},
+ {key:'document',name:'Document centre',lane:'document-centre',providers:['SharePoint','Google Drive','Box','Egnyte','Dropbox'],hint:'Design docs, specs, evidence'},
+ {key:'report',name:'Reports folders',lane:'reports',providers:['SharePoint','Google Drive','Local folder'],hint:'Generated reports'},
+ {key:'financial',name:'Financials folder',lane:'financials',providers:['Google Drive','SharePoint','Local folder'],hint:'Budgets, invoices, spend'},
+ {key:'accounting',name:'Accounting review',lane:'accounting',providers:['Xero','MYOB','QuickBooks Online'],hint:'R&D expenditure → ATO schedule'},
+];
+function lsGet(){try{return JSON.parse(localStorage.getItem('rdConnectors')||'{}')}catch(e){return{}}}
+function lsSet(o){try{localStorage.setItem('rdConnectors',JSON.stringify(o))}catch(e){}}
+function inp(id,ph,val,type){return '<input id="'+id+'" '+(type?('type="'+type+'" '):'')+'placeholder="'+ph+'" value="'+(val||'')+'" style="width:100%;background:#0f1419;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:7px 9px;font-size:12.5px;margin-top:4px">';}
+function buildConnectorsHTML(){
+ const st=lsGet();
+ let h='<div class="panel"><h2>Agent endpoint</h2><div class="foot" style="margin-bottom:10px">The dashboard talks to the R&D AI-Agent (Laravel <code>rd-compliance-agent</code>). Set its base URL and token to test connectivity. <b>API keys below are never stored in the browser</b> — they belong in the server <code>.env</code>; this page generates that config for you.</div>'+
+ '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">'+
+ '<div><label class="muted" style="font-size:12px">Agent base URL</label>'+inp('agentUrl','https://agent.example.com',st.agentUrl)+'</div>'+
+ '<div><label class="muted" style="font-size:12px">Agent token (RD_AGENT_TOKEN)</label>'+inp('agentToken','••••','','password')+'</div></div>'+
+ '<div style="margin-top:10px"><button onclick="testAgent()" style="background:var(--acc);color:#fff;border:none;border-radius:7px;padding:8px 14px;font-size:13px;cursor:pointer">Test agent</button> <span id="agentStatus" class="muted" style="font-size:12px"></span></div></div>';
+
+ h+='<div class="panel"><h2>Integrations</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px">';
+ CONN.forEach(function(c){
+   const cs=st[c.key]||{};
+   const sttxt=cs.enabled?(cs.tested?'Connected':'Configured'):'Not set';
+   const stcol=cs.enabled?(cs.tested?'var(--ok)':'var(--warn)'):'#5e6c84';
+   h+='<div style="background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:13px">'+
+     '<div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">'+c.name+'</b><span class="pill" id="st_'+c.key+'" style="background:'+stcol+'">'+sttxt+'</span></div>'+
+     '<div class="muted" style="font-size:11.5px;margin:3px 0 8px">'+c.hint+' → lane <code>'+c.lane+'</code></div>'+
+     '<label class="muted" style="font-size:11px">Provider</label>'+
+     '<select id="prov_'+c.key+'" style="width:100%;background:#0f1419;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:7px 9px;font-size:12.5px;margin-top:4px">'+
+       c.providers.map(function(p){return '<option'+(cs.provider===p?' selected':'')+'>'+p+'</option>'}).join('')+'</select>'+
+     '<label class="muted" style="font-size:11px;margin-top:8px;display:block">Base URL / workspace</label>'+inp('url_'+c.key,'https://...',cs.url)+
+     '<label class="muted" style="font-size:11px;margin-top:8px;display:block">API key / token (server-side)</label>'+inp('key_'+c.key,'not stored in browser','','password')+
+     '<div style="margin-top:10px;display:flex;gap:8px">'+
+       '<button onclick="saveConn(\''+c.key+'\')" style="background:var(--ok);color:#fff;border:none;border-radius:7px;padding:7px 12px;font-size:12.5px;cursor:pointer">Save</button>'+
+       '<button onclick="testConn(\''+c.key+'\')" style="background:#2a3543;color:var(--ink);border:none;border-radius:7px;padding:7px 12px;font-size:12.5px;cursor:pointer">Test</button>'+
+       '<button onclick="clearConn(\''+c.key+'\')" style="background:none;color:var(--mut);border:1px solid var(--line);border-radius:7px;padding:7px 12px;font-size:12.5px;cursor:pointer">Clear</button>'+
+     '</div></div>';
+ });
+ h+='</div></div>';
+ h+='<div class="panel"><h2>Generate Laravel config</h2><div class="foot" style="margin-bottom:10px">Produces the <code>config/rd-agent.php</code> connector bindings + <code>.env</code> lines to deploy on the host app. Keys you typed are included here so you can paste them into the server — not into the browser store.</div>'+
+   '<button onclick="genConfig()" style="background:var(--acc);color:#fff;border:none;border-radius:7px;padding:8px 14px;font-size:13px;cursor:pointer">Generate</button> '+
+   '<button onclick="copyCfg()" style="background:#2a3543;color:var(--ink);border:none;border-radius:7px;padding:8px 14px;font-size:13px;cursor:pointer">Copy</button> '+
+   '<button onclick="downloadCfg()" style="background:#2a3543;color:var(--ink);border:none;border-radius:7px;padding:8px 14px;font-size:13px;cursor:pointer">Download</button>'+
+   '<pre id="cfgOut" style="margin-top:12px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:11.5px;line-height:1.45;white-space:pre-wrap;color:var(--ink)"></pre></div>';
+ return h;
+}
+function initConnectors(){ /* fields already pre-filled from localStorage in build */ }
+function clsName(p){return p.replace(/[^A-Za-z0-9]/g,'')+'Connector';}
+function saveConn(key){
+ const st=lsGet();
+ st[key]={enabled:true,tested:(st[key]&&st[key].tested)||false,
+   provider:(document.getElementById('prov_'+key)||{}).value,
+   url:(document.getElementById('url_'+key)||{}).value};
+ lsSet(st);
+ const el=document.getElementById('st_'+key); if(el){el.textContent='Configured';el.style.background='var(--warn)';}
+}
+function clearConn(key){const st=lsGet();delete st[key];lsSet(st);const el=document.getElementById('st_'+key);if(el){el.textContent='Not set';el.style.background='#5e6c84';}}
+async function testAgent(){
+ const url=(document.getElementById('agentUrl')||{}).value, tok=(document.getElementById('agentToken')||{}).value;
+ const s=document.getElementById('agentStatus'); const st=lsGet(); st.agentUrl=url; lsSet(st);
+ if(!url){s.textContent='Set an agent URL first.';return;}
+ s.textContent='Testing...';
+ try{const r=await fetch(url.replace(/\/$/,'')+'/api/rd-agent/health',{headers:tok?{'Authorization':'Bearer '+tok}:{}});
+   s.textContent=r.ok?('✓ agent healthy ('+r.status+')'):('✗ HTTP '+r.status);s.style.color=r.ok?'var(--ok)':'var(--bad)';
+ }catch(e){s.textContent='✗ unreachable (check URL/CORS)';s.style.color='var(--bad)';}
+}
+async function testConn(key){
+ const url=(document.getElementById('agentUrl')||{}).value, tok=(document.getElementById('agentToken')||{}).value;
+ saveConn(key);
+ const el=document.getElementById('st_'+key);
+ if(!url){if(el){el.textContent='Configured';}return;}
+ try{const r=await fetch(url.replace(/\/$/,'')+'/api/rd-agent/health',{headers:tok?{'Authorization':'Bearer '+tok}:{}});
+   const st=lsGet(); st[key].tested=r.ok; lsSet(st);
+   if(el){el.textContent=r.ok?'Connected':'Configured';el.style.background=r.ok?'var(--ok)':'var(--warn)';}
+ }catch(e){if(el){el.textContent='Configured';el.style.background='var(--warn)';}}
+}
+function genConfig(){
+ let php="// config/rd-agent.php (connectors)\n'connectors' => [\n";
+ let env="# .env\nRD_AGENT_TOKEN="+((document.getElementById('agentToken')||{}).value||'CHANGE_ME')+"\nRD_SKILLS_BOT_URL="+((document.getElementById('agentUrl')||{}).value||'https://...')+"\n";
+ CONN.forEach(function(c){
+   const prov=(document.getElementById('prov_'+c.key)||{}).value||'Null';
+   const url=(document.getElementById('url_'+c.key)||{}).value||'';
+   const key=(document.getElementById('key_'+c.key)||{}).value||'';
+   php+="    '"+c.key+"' => \\App\\RdConnectors\\"+clsName(prov)+"::class, // lane: "+c.lane+"\n";
+   const U=c.key.toUpperCase();
+   env+="RD_"+U+"_PROVIDER="+prov+"\n";
+   if(url) env+="RD_"+U+"_URL="+url+"\n";
+   env+="RD_"+U+"_KEY="+(key||'CHANGE_ME')+"\n";
+ });
+ php+="],\n";
+ document.getElementById('cfgOut').textContent=php+"\n"+env+"\n// Each connector class implements Fleetpass\\RdAgent\\Contracts\\Connector (pull + normalise).";
+}
+function copyCfg(){const t=document.getElementById('cfgOut').textContent;if(t)navigator.clipboard&&navigator.clipboard.writeText(t);}
+function downloadCfg(){const t=document.getElementById('cfgOut').textContent||'';const b=new Blob([t],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='rd-agent-connectors.txt';a.click();}
 </script>
 </body>
 </html>
