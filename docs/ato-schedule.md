@@ -29,3 +29,6 @@ Captured by the agent's `rd-agent:sync-ato` command. Snapshot located 2026-06-15
 `php artisan rd-agent:sync-ato` (weekly) fetches the instructions page, records the `Last updated` date + a SHA-256 of the page, caches it to `storage/app/rd-agent/ato-schedule.json`, and pushes the metadata to the Skills Bot's compliance panel. If the ATO publishes a newer year (e.g. 2027), update `RD_ATO_YEAR` / the configured URL and re-run.
 
 > Not tax or legal advice. The ATO page is the authority; this is a tracking aid for evidence assembly.
+
+## Re-verification log
+- **2026-06-15** (weekly audit): instructions page re-fetched from ato.gov.au; `Last updated` still **30 May 2026**, QC **107004** unchanged, item 21 / NAT 0656 confirmed. No change to this file's substance.

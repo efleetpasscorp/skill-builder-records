@@ -24,3 +24,6 @@ git remote add origin https://github.com/efleetpasscorp/skill-builder-records.gi
 git push -u origin main
 ```
 If pushing the bundle's history instead: `git clone skill-records.bundle repo && cd repo && git remote set-url origin <url> && git push`.
+
+## Automated weekly audit (from 2026-06-15)
+A weekly Skills Bot run (`rd-compliance-skills-bot`, Mondays) now performs the regulatory refresh, new-session audit, integrity re-hash, dashboard refresh, bundle rebuild and GitHub push. Each run appends a row to `CONTROL-REGISTER.md` §6 and, when there is no new learning session, records a brief "no changes" audit note in `learning-log.md` rather than inventing activity. First run: **2026-06-15** (no new sessions since RUN-016).
