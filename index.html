@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>R&D Skill-Builder Dashboard</title>
+<style>
+:root{--bg:#0f1419;--panel:#171f2b;--panel2:#1e2836;--ink:#e6edf3;--mut:#8b97a7;--line:#2a3543;
+ --acc:#4c9aff;--hs1:#0079bf;--hs2:#61bd4f;--hs3:#c377e0;--ok:#3fb950;--warn:#d29922;--bad:#f85149;--cr:#4c9aff;--rd:#c377e0;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:20px 26px;background:linear-gradient(120deg,#11203a,#171f2b);border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px;letter-spacing:.2px}
+.tag{color:var(--mut);font-size:13px;margin-top:4px;max-width:860px;line-height:1.5}
+nav{display:flex;gap:4px;padding:0 26px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+nav button{background:none;border:none;color:var(--mut);padding:13px 16px;font-size:14px;cursor:pointer;border-bottom:2px solid transparent}
+nav button.on{color:var(--ink);border-bottom-color:var(--acc)}
+main{padding:22px 26px;max-width:1180px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin-bottom:22px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi .n{font-size:28px;font-weight:700}
+.kpi .l{color:var(--mut);font-size:12px;margin-top:3px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:18px}
+h2{font-size:15px;margin:0 0 14px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+.pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;color:#fff;white-space:nowrap}
+.bar{height:10px;border-radius:6px;background:var(--acc)}
+.barrow{display:grid;grid-template-columns:170px 1fr 46px;align-items:center;gap:10px;margin:7px 0;font-size:13px}
+.muted{color:var(--mut)}
+.hide{display:none}
+.board{display:flex;gap:12px;overflow-x:auto;padding-bottom:6px}
+.col{background:var(--panel2);border-radius:10px;min-width:225px;max-width:225px;padding:10px;flex:0 0 auto}
+.col h3{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--mut);margin:2px 4px 9px;display:flex;justify-content:space-between}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 9px;margin-bottom:7px;font-size:12.5px;line-height:1.35}
+.lab{height:6px;width:30px;border-radius:4px;display:inline-block;margin-right:4px}
+.id{font-weight:700}
+.cmeta{color:var(--mut);font-size:11px;margin-top:4px}
+a{color:var(--acc)}
+.foot{color:var(--mut);font-size:11.5px;line-height:1.6;margin-top:8px}
+code{background:#22303f;padding:1px 5px;border-radius:4px;font-size:11px}
+</style>
+</head>
+<body>
+<header>
+ <h1>R&amp;D Skill-Builder Dashboard</h1>
+ <div class="tag">Live view of Leonardo's daily skill-builder curriculum — R&amp;D Management &amp; Contemporaneous Records — managed as an Agile hypothesis pipeline and kept inspection-ready under ITAA 1997 s 355-25. Snapshot 2026-06-15. Source of record: the <a href="https://github.com/efleetpasscorp/skill-builder-records" target="_blank" rel="noopener">skill-builder-records</a> repository.</div>
+</header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<script>
+const S=[
+ {id:'RUN-001',d:'2026-05-29',ds:'stated',t:'CR',sub:'Reduction-to-practice post-AIA',f:'War story',st:'Genuine',hs:'HS-2026-02',wk:1},
+ {id:'RUN-002',d:'2026-05-30',ds:'inferred',t:'CR',sub:'ALCOA+ foundational framework',f:'Concept + diagnostic',st:'Genuine',hs:'HS-2026-01',wk:1},
+ {id:'RUN-003',d:'2026-05-31',ds:'inferred',t:'CR',sub:'ALCOA+ in a 510(k) failure',f:'Dissected example',st:'Genuine',hs:'HS-2026-01',wk:1},
+ {id:'RUN-004',d:'2026-06-01',ds:'inferred',t:'—',sub:'Advisory session',f:'—',st:'Non-lesson',hs:'—',wk:2},
+ {id:'RUN-005',d:'2026-06-02',ds:'inferred',t:'CR',sub:'Contemporaneous is load-bearing (Ranbaxy)',f:'War story',st:'Genuine',hs:'HS-2026-01',wk:2},
+ {id:'RUN-006',d:'2026-06-03',ds:'inferred',t:'CR',sub:'Foundations (not recoverable)',f:'—',st:'Partial',hs:'HS-2026-01',wk:2},
+ {id:'RUN-007',d:'2026-06-04',ds:'inferred',t:'RD',sub:'Portfolio prioritization',f:'Compare-and-contrast',st:'Genuine',hs:'HS-2026-03',wk:2},
+ {id:'RUN-008',d:'2026-06-05',ds:'inferred',t:'CR',sub:'Anatomy of a defensible entry',f:'Concept + exercise',st:'Genuine',hs:'HS-2026-02',wk:2},
+ {id:'RUN-009',d:'2026-06-06',ds:'inferred',t:'—',sub:'Missed (API 529)',f:'—',st:'Null',hs:'—',wk:2},
+ {id:'RUN-010',d:'2026-06-07',ds:'inferred',t:'RD',sub:'Stage-Gate & kill rates',f:'Concept + example',st:'Genuine',hs:'HS-2026-03',wk:2},
+ {id:'RUN-011',d:'2026-06-08',ds:'stated',t:'CR',sub:'A record dissected line by line',f:'Dissection',st:'Genuine',hs:'HS-2026-01',wk:3},
+ {id:'RUN-012',d:'2026-06-09',ds:'inferred',t:'CR',sub:'What "contemporaneous" means',f:'Common-mistake',st:'Genuine',hs:'HS-2026-01',wk:3},
+ {id:'RUN-013',d:'2026-06-10',ds:'inferred',t:'RD',sub:'Stage-Gate & where it breaks',f:'Scenario',st:'Genuine',hs:'HS-2026-03',wk:3},
+ {id:'RUN-014',d:'2026-06-11',ds:'inferred',t:'CR',sub:'Contemporaneity as master principle',f:'Focused lesson',st:'Genuine',hs:'HS-2026-01',wk:3},
+ {id:'RUN-015',d:'2026-06-13',ds:'stated',t:'CR',sub:'ALCOA+ as a grading rubric',f:'Dissected example',st:'Genuine',hs:'HS-2026-01',wk:3},
+ {id:'RUN-016',d:'2026-06-14',ds:'stated',t:'RD',sub:'R&D as a portfolio of bets (Cooper)',f:'Scenario',st:'Genuine',hs:'HS-2026-03',wk:3},
+];
+const HS={
+ 'HS-2026-01':{c:'var(--hs1)',name:'Data integrity & contemporaneity (ALCOA+)',track:'CR',status:'Open — foundations confirmed; repetitive',next:'Open new study on 21 CFR Part 11 audit-trail mechanics & chain-of-custody'},
+ 'HS-2026-02':{c:'var(--hs2)',name:'Legal & evidentiary defensibility',track:'CR',status:'Open — early',next:'Add chain-of-custody, litigation hold, inventorship-in-dispute'},
+ 'HS-2026-03':{c:'var(--hs3)',name:'R&D portfolio & stage-gate governance',track:'RD',status:'Open — developing',next:'Add roadmapping, R&D metrics (Stevens), IP strategy'},
+};
+const COMP=[
+ ['Systematic progression: hypothesis→experiment→observation/evaluation→conclusion','ITAA 1997 s 355-25(1)(a)(ii)','Four-phase block on every run sheet & study'],
+ ['Outcome cannot be known in advance (competent professional)','s 355-25(1)(a)','Hypothesis stated as a tested proposition; sources recorded'],
+ ['Purpose of generating new knowledge','s 355-25(1)(b)','Hypotheses state intended knowledge, recorded at the time'],
+ ['Excluded activities (incl. internal-administration software)','s 355-25(2)(h)','Flagged as a boundary test in compliance docs'],
+ ['Supporting activities — directly related + dominant purpose','s 355-30','"Contributes to" nexus field; reserved for future use'],
+ ['Keep records to substantiate (retention, contemporaneity)','ITAA 1936 s 262A; AusIndustry Guide Tables 1&2','Dated run sheets, SHA-256 hashes, git history, bundle'],
+ ['Annual registration within 10 months of year-end','Industry Research and Development Act 1986','Process note for any real claim'],
+];
+const KPI=[['16','Scheduled runs'],['13','Genuine lessons'],['3','Hypothesis studies'],['3','Sprints (weeks)'],['2','Null/advisory'],['1','Partial']];
+
+const tabs=['Overview','Curriculum','Hypothesis Studies','Task Board','Compliance','Integrity'];
+let cur='Overview';
+const nav=document.getElementById('nav'),main=document.getElementById('main');
+tabs.forEach(t=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{cur=t;render()};nav.appendChild(b)});
+function trackPill(t){const c=t==='CR'?'var(--cr)':t==='RD'?'var(--rd)':'#5e6c84';const n=t==='CR'?'Contemp. Records':t==='RD'?'R&D Mgmt':'—';return `<span class="pill" style="background:${c}">${n}</span>`}
+function stPill(s){const m={Genuine:'var(--ok)',Partial:'var(--warn)',Null:'var(--bad)','Non-lesson':'#5e6c84'};return `<span class="pill" style="background:${m[s]||'#5e6c84'}">${s}</span>`}
+function bars(data){return data.map(([l,v,max,c])=>`<div class="barrow"><span class="muted">${l}</span><div class="bar" style="width:${Math.round(v/max*100)}%;background:${c||'var(--acc)'}"></div><span>${v}</span></div>`).join('')}
+
+function render(){
+ [...nav.children].forEach(b=>b.classList.toggle('on',b.textContent===cur));
+ let h='';
+ if(cur==='Overview'){
+   h+='<div class="kpis">'+KPI.map(k=>`<div class="kpi"><div class="n">${k[0]}</div><div class="l">${k[1]}</div></div>`).join('')+'</div>';
+   const crN=S.filter(s=>s.t==='CR').length, rdN=S.filter(s=>s.t==='RD').length;
+   h+='<div class="panel"><h2>Coverage by track</h2>'+bars([['Contemporaneous Records',crN,16,'var(--cr)'],['R&D Management',rdN,16,'var(--rd)'],['Non-productive',3,16,'#5e6c84']])+'<div class="foot">The records track is well-developed; the management track is comparatively thin — the forward backlog prioritises R&D Management.</div></div>';
+   const v=[1,2,3].map(w=>['Sprint week-0'+w,S.filter(s=>s.wk===w&&s.st==='Genuine').length,6,'var(--ok)']);
+   h+='<div class="panel"><h2>Sprint velocity (genuine lessons / week)</h2>'+bars(v)+'</div>';
+   h+='<div class="panel"><h2>Hypothesis studies (epics)</h2><table><tr><th>Study</th><th>Title</th><th>Track</th><th>Status</th></tr>'+Object.entries(HS).map(([k,e])=>`<tr><td><span class="lab" style="background:${e.c}"></span><b>${k}</b></td><td>${e.name}</td><td>${trackPill(e.track)}</td><td class="muted">${e.status}</td></tr>`).join('')+'</table></div>';
+ }
+ else if(cur==='Curriculum'){
+   h+='<div class="panel"><h2>All sessions (29 May – 14 Jun 2026)</h2><table><tr><th>Run</th><th>Date</th><th>Track</th><th>Subtopic</th><th>Format</th><th>Status</th><th>Study</th></tr>'+
+   S.map(s=>`<tr><td class="id">${s.id}</td><td>${s.d}<br><span class="muted" style="font-size:10px">${s.ds}</span></td><td>${trackPill(s.t)}</td><td>${s.sub}</td><td class="muted">${s.f}</td><td>${stPill(s.st)}</td><td class="muted">${s.hs}</td></tr>`).join('')+'</table>'+
+   '<div class="foot">Stated dates: 29 May, 8/13/14 Jun; others inferred (±1 day). Apparent one-day gap on 12 Jun.</div></div>';
+ }
+ else if(cur==='Hypothesis Studies'){
+   h+=Object.entries(HS).map(([k,e])=>{const cards=S.filter(s=>s.hs===k);return `<div class="panel"><h2><span class="lab" style="background:${e.c}"></span>${k} — ${e.name}</h2><div class="muted" style="font-size:13px;margin-bottom:10px">Status: ${e.status} · Track: ${e.track}</div><table><tr><th>Run</th><th>Date</th><th>Subtopic</th><th>Status</th></tr>${cards.map(s=>`<tr><td class="id">${s.id}</td><td>${s.d}</td><td>${s.sub}</td><td>${stPill(s.st)}</td></tr>`).join('')}</table><div class="foot"><b>Next (open task):</b> ${e.next}</div></div>`}).join('');
+ }
+ else if(cur==='Task Board'){
+   const cols=[
+    {t:'Backlog',cards:[['HS-2026-01','CR','21 CFR Part 11 audit-trail'],['HS-2026-01','CR','Chain-of-custody'],['HS-2026-02','CR','Litigation hold / spoliation'],['HS-2026-02','CR','Inventorship in dispute'],['HS-2026-03','RD','Technology roadmapping'],['HS-2026-03','RD','R&D metrics (Stevens)'],['HS-2026-03','RD','Managing scientists'],['HS-2026-03','RD','IP strategy']]},
+    {t:'Hypothesis defined',cards:[['HS-2026-03','RD','R&D metrics — next up']]},
+    {t:'Experiment',cards:[]},
+    {t:'Observation & eval',cards:[]},
+    {t:'Concluded ✓',cards:S.filter(s=>s.st==='Genuine').map(s=>[s.hs,s.t,s.id+' '+s.sub])},
+    {t:'Blocked / rework',cards:S.filter(s=>s.st==='Partial'||s.st==='Null'||s.st==='Non-lesson').map(s=>[s.hs,s.t,s.id+' '+s.sub+' ('+s.st+')'])},
+   ];
+   h+='<div class="panel"><h2>Agile R&D Kanban — epics=studies, cards=run sheets, sprints=weeks</h2><div class="board">'+
+   cols.map(c=>`<div class="col"><h3>${c.t}<span>${c.cards.length}</span></h3>${c.cards.map(cd=>{const e=HS[cd[0]];return `<div class="card"><div>${e?`<span class="lab" style="background:${e.c}"></span>`:''}${trackPill(cd[1])}</div><div style="margin-top:5px">${cd[2]}</div></div>`}).join('')}</div>`).join('')+
+   '</div><div class="foot">Definition of Done: conclusion engages the hypothesis AND run sheet filed, hashed, linked to a study + weekly report. WIP rule: pull the top backlog card respecting track alternation.</div></div>';
+ }
+ else if(cur==='Compliance'){
+   h+='<div class="panel"><h2>R&DTI legislative mapping (ITAA 1997 Div 355)</h2><table><tr><th>Requirement</th><th>Source</th><th>How addressed</th></tr>'+
+   COMP.map(r=>`<tr><td>${r[0]}</td><td class="muted">${r[1]}</td><td>${r[2]}</td></tr>`).join('')+'</table>'+
+   '<div class="foot"><b>Caveat:</b> format alignment does not assert the learning activity is itself eligible R&D — a separate, facts-based assessment under s 355-25. Authorities: AusIndustry <i>Guide to Interpretation</i> & <i>Software-related activities</i> (May 2024); ss 355-25/355-30. Not tax or legal advice.</div></div>';
+ }
+ else if(cur==='Integrity'){
+   h+='<div class="panel"><h2>Provenance & integrity</h2><div class="foot" style="font-size:13px">'+
+   '• Reconstructive compilation built 2026-06-15 from verified session transcripts — openly flagged, not backdated.<br>'+
+   '• 16 runs documented: 13 genuine, 1 partial (RUN-006), 2 non-productive (RUN-004 advisory, RUN-009 null API error). Nothing omitted.<br>'+
+   '• Dating: stated for RUN-001/011/015/016; all others inferred (±1 day); apparent gap 12 Jun.<br>'+
+   '• Every file carries a SHA-256 hash in <code>run-sheets/INDEX.md</code>; git history and <code>archive/skill-records.bundle</code> are the immutable trail.<br>'+
+   '• Known control issue: prior-run detection repeatedly failed (RUN-006/014 "Session 1"; RUN-010/013 "Day 1") → ALCOA+ over-coverage. Remediation: the control register is now the single source of progression truth.<br>'+
+   '• Traceability: <code>CONTROL-REGISTER.md</code> maps every run sheet → study → weekly report → source session.</div></div>';
+ }
+ main.innerHTML=h;
+}
+render();
+</script>
+</body>
+</html>
