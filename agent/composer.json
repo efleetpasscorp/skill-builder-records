@@ -1,0 +1,21 @@
+{
+  "name": "fleetpass/rd-compliance-agent",
+  "description": "Laravel AI Agent that plugs into any application to review data records and route them into the R&D skills-manager for Inspector/Auditor review, in sync with the R&D Skills Bot.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "^10.0|^11.0",
+    "illuminate/http": "^10.0|^11.0",
+    "guzzlehttp/guzzle": "^7.5"
+  },
+  "autoload": {
+    "psr-4": { "Fleetpass\\RdAgent\\": "src/" }
+  },
+  "extra": {
+    "laravel": {
+      "providers": ["Fleetpass\\RdAgent\\RdAgentServiceProvider"]
+    }
+  },
+  "minimum-stability": "stable"
+}
