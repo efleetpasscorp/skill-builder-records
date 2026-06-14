@@ -38,3 +38,15 @@ Two alternating tracks, built foundations-first. Compiled 2026-06-15 from sessio
 ## Recommended forward plan
 
 Alternate strictly: next session R&D Management (roadmapping or R&D metrics), then Contemporaneous Records (audit trails / 21 CFR Part 11 mechanics, a subtopic not yet given its own session). Maintain this map as the single source of truth for progression so prior-run detection failures stop causing repetition.
+
+## Hypothesis studies (epics) and Agile mapping
+
+The curriculum's threads are managed as Hypothesis Studies (epics) and run as an Agile R&D pipeline (see `../task-board.md` and `../hypothesis-studies/`).
+
+| Study (epic) | Track | Run sheets (cards) | Status |
+|---|---|---|---|
+| HS-2026-01 — Data integrity & contemporaneity (ALCOA+) | CR | RUN-002,003,005,006*,011,012,014,015 | Open — foundations confirmed |
+| HS-2026-02 — Legal & evidentiary defensibility | CR | RUN-001,008 | Open — early |
+| HS-2026-03 — R&D portfolio & stage-gate governance | RD | RUN-007,010,013,016 | Open — developing |
+
+Regulatory alignment of the record structure to ITAA 1997 ss 355-25/355-30 and ATO/AusIndustry requirements is documented in `../docs/compliance-mapping.md`.
