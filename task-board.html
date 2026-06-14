@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Skill-Builder R&D Task Board</title>
+<style>
+  :root{--bg:#f4f5f7;--ink:#172b4d;--mut:#5e6c84;--line:#dfe1e6;
+    --hs1:#0079bf;--hs2:#61bd4f;--hs3:#c377e0;--done:#519839;--blk:#eb5a46;--bl:#f2d600;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+  header{padding:18px 22px;background:#fff;border-bottom:1px solid var(--line)}
+  h1{margin:0 0 4px;font-size:20px}
+  .sub{color:var(--mut);font-size:13px;max-width:980px;line-height:1.5}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:12px;color:var(--mut)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+  .board{display:flex;gap:14px;padding:18px 22px;overflow-x:auto;align-items:flex-start}
+  .col{background:#ebecf0;border-radius:10px;min-width:255px;max-width:255px;padding:10px;flex:0 0 auto}
+  .col h2{font-size:13px;text-transform:uppercase;letter-spacing:.4px;margin:4px 6px 10px;color:var(--mut);display:flex;justify-content:space-between}
+  .count{background:#dcdee3;border-radius:10px;padding:0 8px;font-size:11px;line-height:18px}
+  .card{background:#fff;border-radius:8px;padding:9px 10px;margin-bottom:8px;box-shadow:0 1px 0 rgba(9,30,66,.18);font-size:13px;line-height:1.35}
+  .labels{display:flex;gap:5px;margin-bottom:6px;flex-wrap:wrap}
+  .lab{height:7px;width:34px;border-radius:4px}
+  .pill{font-size:10px;font-weight:600;padding:1px 7px;border-radius:10px;color:#fff;display:inline-block}
+  .id{font-weight:700}
+  .meta{color:var(--mut);font-size:11px;margin-top:5px}
+  .foot{padding:8px 22px 26px;color:var(--mut);font-size:11.5px;max-width:1000px;line-height:1.5}
+  code{background:#eef0f3;padding:1px 5px;border-radius:4px;font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Skill-Builder R&amp;D Task Board <span style="font-weight:400;color:var(--mut);font-size:14px">· Agile hypothesis management</span></h1>
+  <div class="sub">Trello-style Kanban operationalising the contemporaneous-records control register. <b>Epics = Hypothesis Studies</b>, <b>cards = run sheets / backlog hypotheses</b>, <b>sprints = weeks</b>. Columns map to the ITAA 1997 s 355-25 systematic-progression phases (hypothesis → experiment → observation/evaluation → conclusion) plus Done and Blocked. Static snapshot compiled 2026-06-15; the source of truth is <code>CONTROL-REGISTER.md</code>.</div>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--hs1)"></i>HS-2026-01 ALCOA+ data integrity</span>
+    <span><i class="dot" style="background:var(--hs2)"></i>HS-2026-02 Legal defensibility</span>
+    <span><i class="dot" style="background:var(--hs3)"></i>HS-2026-03 R&amp;D portfolio/stage-gate</span>
+    <span><i class="dot" style="background:var(--blk)"></i>Blocked / rework</span>
+  </div>
+</header>
+<div class="board" id="board"></div>
+<div class="foot">
+  <b>Definition of Done:</b> conclusion engages the hypothesis (confirmed/partial/refuted) AND run sheet filed, SHA-256 hashed, linked to a study and a weekly report.
+  <b>WIP rule:</b> scheduler pulls the top Backlog card respecting track alternation (never the same track twice running). Blocked cards (partial/null) carry a remediation task.
+  Regulatory mapping: <code>docs/compliance-mapping.md</code>.
+</div>
+<script>
+const EPIC={HS1:{c:'var(--hs1)',name:'HS-01'},HS2:{c:'var(--hs2)',name:'HS-02'},HS3:{c:'var(--hs3)',name:'HS-03'}};
+const cols=[
+ {t:'Backlog — proposed hypotheses',cards:[
+   {e:'HS1',track:'CR',txt:'21 CFR Part 11 audit-trail mechanics'},
+   {e:'HS1',track:'CR',txt:'Chain-of-custody for records'},
+   {e:'HS2',track:'CR',txt:'Litigation hold / spoliation'},
+   {e:'HS2',track:'CR',txt:'Patent inventorship in dispute'},
+   {e:'HS3',track:'RD',txt:'Technology roadmapping'},
+   {e:'HS3',track:'RD',txt:'R&D metrics / productivity (Stevens)'},
+   {e:'HS3',track:'RD',txt:'Managing scientists & engineers'},
+   {e:'HS3',track:'RD',txt:'IP strategy'},
+ ]},
+ {t:'Hypothesis defined (next up)',cards:[
+   {e:'HS3',track:'RD',txt:'R&D metrics / productivity',meta:'Selected next — balances the thin RD track'},
+ ]},
+ {t:'Experiment (in progress)',cards:[]},
+ {t:'Observation & evaluation',cards:[]},
+ {t:'Concluded ✓',cards:[
+   {id:'RUN-001',e:'HS2',track:'CR',txt:'Reduction-to-practice post-AIA',meta:'29 May · wk-01 ✓'},
+   {id:'RUN-002',e:'HS1',track:'CR',txt:'ALCOA+ foundational framework',meta:'30 May · wk-01 ✓'},
+   {id:'RUN-003',e:'HS1',track:'CR',txt:'ALCOA+ in a 510(k) failure',meta:'31 May · wk-01 ✓'},
+   {id:'RUN-005',e:'HS1',track:'CR',txt:'Contemporaneous is load-bearing (Ranbaxy)',meta:'2 Jun · wk-02 ✓'},
+   {id:'RUN-007',e:'HS3',track:'RD',txt:'Portfolio prioritization',meta:'4 Jun · wk-02 ✓'},
+   {id:'RUN-008',e:'HS2',track:'CR',txt:'Anatomy of a defensible entry',meta:'5 Jun · wk-02 ✓'},
+   {id:'RUN-010',e:'HS3',track:'RD',txt:'Stage-Gate & kill rates',meta:'7 Jun · wk-02 ✓'},
+   {id:'RUN-011',e:'HS1',track:'CR',txt:'A record dissected line by line',meta:'8 Jun · wk-03 ✓'},
+   {id:'RUN-012',e:'HS1',track:'CR',txt:'What "contemporaneous" means',meta:'9 Jun · wk-03 ✓'},
+   {id:'RUN-013',e:'HS3',track:'RD',txt:'Stage-Gate & where it breaks',meta:'10 Jun · wk-03 ✓'},
+   {id:'RUN-014',e:'HS1',track:'CR',txt:'Contemporaneity as master principle',meta:'11 Jun · wk-03 ✓'},
+   {id:'RUN-015',e:'HS1',track:'CR',txt:'ALCOA+ as a grading rubric',meta:'13 Jun · wk-03 ✓'},
+   {id:'RUN-016',e:'HS3',track:'RD',txt:'R&D as a portfolio of bets (Cooper)',meta:'14 Jun · wk-03 ✓'},
+ ]},
+ {t:'Blocked / needs rework',cards:[
+   {id:'RUN-006',e:'HS1',track:'CR',txt:'Foundations — lesson not recoverable',meta:'3 Jun · ⚠ partial · recover log / re-run',blk:1},
+   {id:'RUN-009',track:'—',txt:'Missed session (API 529)',meta:'6 Jun · ⛔ null · re-run',blk:1},
+   {id:'RUN-004',track:'—',txt:'Advisory session (non-lesson)',meta:'1 Jun · ▫ no action',blk:1},
+ ]},
+];
+const board=document.getElementById('board');
+cols.forEach(col=>{
+ const d=document.createElement('div');d.className='col';
+ d.innerHTML=`<h2>${col.t}<span class="count">${col.cards.length}</span></h2>`;
+ col.cards.forEach(c=>{
+   const ep=EPIC[c.e];
+   const card=document.createElement('div');card.className='card';
+   let labs='';
+   if(ep) labs+=`<i class="lab" style="background:${ep.c}"></i>`;
+   if(c.blk) labs+=`<i class="lab" style="background:var(--blk)"></i>`;
+   card.innerHTML=
+     `<div class="labels">${labs}${ep?`<span class="pill" style="background:${ep.c}">${ep.name}</span>`:''}`+
+     `${c.track&&c.track!=='—'?`<span class="pill" style="background:#8993a4">${c.track}</span>`:''}</div>`+
+     `${c.id?`<span class="id">${c.id}</span> · `:''}${c.txt}`+
+     `${c.meta?`<div class="meta">${c.meta}</div>`:''}`;
+   d.appendChild(card);
+ });
+ board.appendChild(d);
+});
+</script>
+</body>
+</html>

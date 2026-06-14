@@ -1,39 +1,41 @@
 # Skill-Builder Contemporaneous Records
 
-Record-keeping repository for Leonardo's daily skill-builder curriculum, covering two tracks — **R&D Management** and **Contemporaneous Records**. The trail is kept as a **Systematic Progression of Work (SPW)** so it is defensible under the same contemporaneous-documentation logic AusIndustry applies to R&D core-activity continuity (ITAA 1997 s 355-25): a dated chain of entries, each session evidenced by a run sheet, aggregated into weekly syntheses.
+Record-keeping repository for Leonardo's daily skill-builder curriculum, covering two tracks — **R&D Management** and **Contemporaneous Records**. The trail is kept as a **Systematic Progression of Work (SPW)** so it is structured for an R&D inspector to review under the same logic AusIndustry applies to R&D core-activity continuity (**ITAA 1997 s 355-25**): a dated chain of entries, each session evidenced by a run sheet, hypotheses aggregated into studies, weeks rolled into syntheses.
+
+## Start here (for an inspector)
+**`CONTROL-REGISTER.md`** is the single entry point: it governs the hypotheses, maps every run sheet to its Hypothesis Study and weekly report, tracks open/confirmed lines of inquiry, and lists coverage, dating, and integrity. Read it first.
 
 ## Repository layout
 
 ```
 .
-├── README.md                  Overview, provenance, integrity (this file)
-├── learning-log.md            Full chronological SPW log — one entry per session
-├── run-sheets/                Per-session evidentiary run sheets
-│   ├── INDEX.md               Master index + integrity hashes + dating notes
-│   └── RUN-0NN-YYYY-MM-DD.md  One per session (incl. null/partial runs)
-├── weekly-reports/            Weekly synthesis reports
-│   ├── 2026-05-31-week-01.md
-│   ├── 2026-06-07-week-02.md
-│   └── 2026-06-14-week-03.md
+├── README.md                    Overview (this file)
+├── CONTROL-REGISTER.md          Master control + traceability + inspector index  ← start here
+├── learning-log.md              Full chronological SPW log (one entry per session)
+├── run-sheets/                  Per-session evidentiary run sheets (4-phase hypothesis work)
+│   ├── INDEX.md                 Index, study links, integrity hashes, dating notes
+│   └── RUN-0NN-YYYY-MM-DD.md    One per session (incl. null/partial)
+├── hypothesis-studies/          Multi-session inquiries (the controlled hypotheses)
+│   ├── INDEX.md
+│   └── HS-2026-NN.md
+├── weekly-reports/              Weekly syntheses (week-01 … week-03)
 ├── curriculum/
-│   └── curriculum-map.md      Tracks, topics covered, progression, known gaps
+│   └── curriculum-map.md        Tracks, progression, study mapping, known gaps
 ├── docs/
-│   └── maintenance.md         How records are produced and pushed
+│   ├── maintenance.md           How records are produced and pushed
+│   └── compliance-mapping.md    Mapping to R&DTI legislation & ATO/AusIndustry requirements
 └── archive/
-    └── skill-records.bundle   Portable git bundle (full history, clonable)
+    └── skill-records.bundle     Portable git bundle (full history, clonable)
 ```
 
-## Coverage
+## The evidence chain
+**Hypothesis Study → Run Sheets → Weekly Report → Learning Log → source session.** Each run sheet carries the four statutory phases (hypothesis → experiment → observation/evaluation → conclusion) and names the study it feeds; `CONTROL-REGISTER.md` holds the full traceability matrix.
 
-Sixteen scheduled runs are documented (29 May – 14 June 2026): **13 genuine lessons**, **2 null runs** (one API error, one non-lesson advisory session), and **1 partial run** (lesson produced but not recoverable from the transcript). Null and partial runs are recorded rather than omitted — an honestly documented gap is a legitimate record; a fabricated one is not.
+## Coverage
+Sixteen scheduled runs (29 May – 14 June 2026): **13 genuine lessons**, **2 non-productive** (RUN-004 advisory, RUN-009 null API error), **1 partial** (RUN-006). Null/partial runs are recorded, not omitted.
+
+## Regulatory basis
+The record structure is aligned to **ITAA 1997 ss 355-25 / 355-30** and AusIndustry's *Guide to Interpretation* and *Software-related activities* guide; substantiation/retention reflects **ITAA 1936 s 262A**. See `docs/compliance-mapping.md`. Format alignment does not assert the learning activity is itself eligible R&D — that is a separate, facts-based assessment. Not tax or legal advice.
 
 ## Provenance & integrity
-
-This repository was compiled on 2026-06-15 by reading the saved transcripts of the prior scheduled runs. It is therefore a **reconstructive** compilation, openly flagged as such, not a set of entries written live on each session day. Dating rules:
-
-- **Stated dates** (verbatim in the transcript): 29 May, 8 June, 13 June, 14 June 2026.
-- **Inferred dates**: all others, assigned by session-history ordering assuming the documented ~daily 17:30 cadence. Every inferred date is flagged `(inferred)` in its run sheet and in `run-sheets/INDEX.md`, and may be off by ±1 day. There appears to be one unfilled day between the 8 June and 13 June anchors (see INDEX).
-
-Content-integrity hashes for every file are listed in `run-sheets/INDEX.md`. The git commit history (and the bundle in `archive/`) provide the authoritative immutable audit trail.
-
-> Going forward, filing each run sheet on its own session day would make the chain fully contemporaneous rather than reconstructed.
+Reconstructive compilation built 2026-06-15 from verified session transcripts — openly flagged, not backdated. Stated dates: 29 May, 8 Jun, 13 Jun, 14 Jun; all others inferred (±1 day; apparent gap 12 Jun). SHA-256 hashes in `run-sheets/INDEX.md`; git history and the bundle are the immutable trail. Going forward, filing each run sheet on its own session day makes the chain fully contemporaneous.
