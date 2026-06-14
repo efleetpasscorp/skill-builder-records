@@ -1,65 +1,107 @@
 # Skill-Builder Learning Log — Systematic Progression of Work (SPW)
 
-**Profile:** daily-skill-builder-rd-records (Leonardo)
-**Curriculum tracks:** (1) R&D Management; (2) Contemporaneous Records
-**Record format:** Adapted SPW (hypothesis → activity → observation/evaluation → conclusion → next working hypothesis), per ITAA 1997 s 355-25 contemporaneous-documentation logic.
-**Compilation note:** This log was compiled on 2026-06-15 from the verified session transcripts of three completed skill-builder runs. Each entry below summarises one daily run; the evidentiary detail for each sits in the matching run sheet under `run-sheets/`. Where a run date could not be independently confirmed from session metadata it is flagged as *inferred*.
+**Profile:** daily-skill-builder-rd-records (Leonardo) · **Tracks:** R&D Management; Contemporaneous Records
+**Format:** Adapted SPW (objective/hypothesis → activity/sources → observation/evaluation → conclusion → next hypothesis).
+**Compilation:** Built 2026-06-15 from verified session transcripts. Each entry summarises one scheduled run; evidentiary detail is in the matching `run-sheets/RUN-0NN-*.md`. Dates marked *(inferred)* are not stated in the transcript and are positioned by session-history order under the daily cadence (±1 day). Reconstructive compilation is disclosed, not concealed.
 
 ---
 
-## 2026-06-12 — Contemporaneous Records: contemporaneity as the master principle *(date inferred from the daily 17:30 schedule; flagged as not independently confirmed)*
+## 2026-05-29 — CR: Reduction-to-practice doctrine & inventor notebooks post-AIA  [RUN-001]
+**Objective:** Show why contemporaneous, corroborated inventor records still decide priority after the America Invents Act.
+**Activity:** AIA (effective 2013-03-16) shift from first-to-invent to first-inventor-to-file; composite derivation-proceeding war story (echoing *Apotex v. Wellcome*, the CRISPR interferences); case law — *Price v. Symsek* (1993, inventor testimony alone insufficient for conception) and *Mahurkar v. C.R. Bard* (rule-of-reason corroboration); 21 CFR Part 11-compliant ELN features (RFC 3161 timestamping, immutable audit trail, witness review).
+**Observation/Evaluation:** Three things AIA did NOT change — conception still needs corroboration; reduction-to-practice still matters for prior-user rights (§273); inventorship still tracks conception (35 USC §256). Jira/Confluence/GitHub/Slack are editable/backdatable and not evidentiary systems.
+**Conclusion:** Confirmed. Tamper-resistant, witnessed, dated corroboration of conception remains essential post-AIA.
+**Next:** Establish the general data-integrity framework behind such records (ALCOA+).
 
-**Learning objective (working hypothesis):** A record made at the time of an event is *categorically*, not marginally, more trustworthy than one reconstructed later — and this single property is the one that cannot be retrofitted.
+## 2026-05-30 — CR: ALCOA+ foundational data-integrity framework  [RUN-002] *(inferred)*
+**Objective:** Define the nine-attribute yardstick every regulated record is judged against.
+**Activity:** ALCOA (Stan Woollen, FDA, 1990s) → ALCOA+ (CCEA added later); regulatory convergence (FDA 21 CFR Part 11, EU GMP Annex 11, MHRA, WHO, ICH Q7, ISO 9001); diagnostic exercise on an undated, "Lab"-signed entry with correction tape and a discarded failed run failing ≥7 of 9 principles; OOS (out-of-spec) concept.
+**Observation/Evaluation:** Shared logins violate Attributable (21 CFR Part 11 §11.10(d)); "write up later" scrap notes violate Contemporaneous. Calibrate rigour to stakes.
+**Conclusion:** Confirmed. ALCOA+ is the master rubric for the records track.
+**Next:** Apply the rubric to a realistic regulated-submission failure.
 
-**Activity / sources examined:**
-- ALCOA+ framework as codified in FDA inspection practice and WHO / PIC/S data-integrity guidance (Attributable, Legible, Contemporaneous, Original, Accurate + Complete, Consistent, Enduring, Available).
-- US Federal Rule of Evidence 803(6) business-records hearsay exception ("made at or near the time… as a regular practice") as the legal antecedent of the same principle.
-- Mechanism literature: Ebbinghaus forgetting curve (memory decay within 24h); Fischhoff "creeping determinism" / hindsight bias; incentive drift between event and write-up.
+## 2026-05-31 — CR: ALCOA+ underwriting regulated records  [RUN-003] *(inferred)*
+**Objective:** Show how the nine attributes fail together in a real submission context.
+**Activity:** Nine principles restated; dissected a biotech 510(k) scenario — HPLC chromatograms failing Contemporaneous (PDFs dated 3 weeks late), Complete (14 injections run, 12 shown), Original (raw .d files overwritten), Attributable (shared analyst login).
+**Observation/Evaluation:** Any single failure = a 483 observation; combined = a warning letter. Relevance extends to patent inventorship, R&D-tax claims, litigation holds. "ALCOA+ is a system property, not a behaviour."
+**Conclusion:** Confirmed. Integrity is structural, not down to individual diligence.
+**Next:** (Advisory session intervened — see RUN-004.)
 
-**Observation / evaluation:** Of the nine ALCOA+ properties, most are auditable after the fact (a missing signature can be traced; an illegible entry transcribed and verified). Contemporaneousness is the sole property that cannot be repaired — a late record is permanently a memory dressed as a record. This is why inspectors treat backdating as fraud rather than sloppiness.
+## 2026-06-01 — Advisory/working session (not a curriculum lesson)  [RUN-004] *(inferred)*
+**Note:** This run was a working/advisory session (live matters: ATO audit, professional-negligence matter, AusIndustry R&D review) recommending project-memory and contemporaneous-evidence tooling. No dated lesson header, track, subtopic, or reflection in the standard format. Recorded as a non-lesson day for completeness.
 
-**Conclusion:** Confirmed. Contemporaneity is the master principle because it is the only ALCOA+ attribute that is irreversibly lost. Practical bar adopted: *the record is finished before the next task starts, and never after the outcome arrives.*
+## 2026-06-02 — CR: Why "Contemporaneous" is the load-bearing letter  [RUN-005] *(inferred)*
+**Objective:** Demonstrate that non-contemporaneous records corrupt every other ALCOA attribute at once.
+**Activity:** Ranbaxy data-integrity collapse (2004–2013) — whistleblower Dinesh Thakur; Paonta Sahib & Dewas plants; results recorded before tests run; fabricated stability data; notebooks rewritten months later; batch records signed by absent staff. Outcomes: 2013 consent decree, $500M, lost US market access; Daiichi Sankyo's $4.6B (2008) acquisition later sold at a loss; Thakur ~$48M FCA whistleblower award.
+**Observation/Evaluation:** Heuristic — "if it isn't written down it didn't happen, and if it was written down later it still didn't happen"; recall half-life ≈ end of the working day.
+**Conclusion:** Confirmed. Contemporaneity is the keystone; lose it and the rest follows.
+**Next:** Records-track foundations consolidation.
 
-**Next working hypothesis:** The full ALCOA+ set can be used as a concrete grading rubric to show that a clean-looking summary record is often weaker than a messy complete one.
+## 2026-06-03 — CR: Foundations  [RUN-006] *(inferred)* — PARTIAL
+**Note:** Run succeeded and a lesson was produced and written to a file, but the lesson body is not recoverable from the transcript (only setup tool calls and a one-line completion note are visible; it self-identified as "Session 1" and flagged a switch to R&D Management next). Recorded as partial; content not independently verifiable.
 
-**Format used:** focused lesson + reflection prompt. **Run sheet:** RUN-2026-06-12-01.
+## 2026-06-04 — RD: Portfolio prioritization fundamentals  [RUN-007] *(inferred)*
+**Objective:** Compare how leading firms prioritise R&D portfolios.
+**Activity:** Cooper, Edgett & Kleinschmidt research. Approach A — financial methods (NPV; Expected Commercial Value ECV = ((NPV × P_comm − C_launch) × P_tech) − C_dev; productivity index); Cooper's finding that finance-dominant firms had the worst portfolios. Approach B — strategic buckets (70/20/10 core/adjacent/transformational, Nagji & Tuff) + weighted scoring models.
+**Observation/Evaluation:** Synthesis — buckets set macro allocation, scoring ranks within buckets, financial metrics used only as a late-stage gate check.
+**Conclusion:** Confirmed. Prioritisation is multi-method; finance alone underperforms.
+**Next:** Records-track applied notebook discipline.
 
----
+## 2026-06-05 — CR: Notebook & engineering-log discipline (anatomy of a defensible entry)  [RUN-008] *(inferred)*
+**Objective:** Derive the anatomy of a defensible entry from ALCOA+ and practise spotting defects.
+**Activity:** ALCOA+ recap; 21 CFR Part 11 electronic equivalents (validated systems, computer-generated audit trails, non-repudiable e-signatures); *falsus in uno* taint; defensible-entry anatomy (bound numbered pages, permanent ink, dated/signed, single-line strikethrough, no blank space, signed-across attachments, "read and understood by" witness); hands-on exercise — a flawed engineering-log entry with ≥7 defects + answer key.
+**Observation/Evaluation:** First failing ALCOA letter = the personal habit to fix.
+**Conclusion:** Confirmed. Defensibility is a checklist that can be practised.
+**Next:** (API-error null run intervened — see RUN-009.)
 
-## 2026-06-13 — Contemporaneous Records: ALCOA+ as a grading rubric (dissected example)
+## 2026-06-06 — No lesson (API error 529)  [RUN-009] *(inferred)* — NULL
+**Note:** Only output was "API Error: 529 Overloaded." No lesson delivered. Recorded as a null day.
 
-**Learning objective (working hypothesis):** Applying the nine ALCOA+ criteria to two real-looking records will show that completeness — including recorded failures — is what makes documentation credible, and that the polished summary is the weaker evidentiary artefact.
+## 2026-06-07 — RD: Stage-Gate & why kill-rates are the point  [RUN-010] *(inferred)*
+**Objective:** Reframe R&D management as killing wrong ideas cheaply without killing right ones early.
+**Activity:** Stage-Gate (Cooper, late 1980s) — stages (scoping, business case, development, testing, launch) and gates (go/kill/hold/recycle, explicit criteria, designated gatekeeper). Stages progressively more expensive/less uncertain; gates are decisions with stop authority, not status updates. Example: an "8-hour battery life before development" criterion; a 5.5h prototype getting a conditional pass = the failure mode.
+**Observation/Evaluation:** One unjustified pass devalues every future gate; biggest failure mode is "gates with no teeth."
+**Conclusion:** Confirmed. Gate credibility is the asset.
+**Next:** Records-track ALCOA+ applied to a single dissected entry.
 
-**Activity / sources examined:**
-- ALCOA (original five) and ALCOA+ (added Complete, Consistent, Enduring, Available), with each criterion defined operationally.
-- Dissected worked example: two engineers running the same battery-cycling test.
-  - *Engineer A:* sticky-note capture → clean same-evening summary typed from memory → source note discarded.
-  - *Engineer B:* direct logging to a validated electronic notebook — instrument ID, calibration date, hash-stamped raw capacity-vs-cycle file, two prior failed runs (~cycle 300) with suspected-cause note, changed parameters, system-applied timestamp, witness signature two days later.
+## 2026-06-08 — CR: ALCOA+ foundation — a record dissected line by line  [RUN-011]
+**Objective:** Show that evidentiary value comes from how/when a record is made, not just its content.
+**Activity:** ALCOA (Woollen) → ALCOA+; embedded in GxP (FDA/MHRA/WHO) and ISO 9001:2015 §7.5; only Accurate is about content, the other eight about process. Dissected two versions of the same observation — Version A ("worked better at lower temp, yield up") vs Version B (timestamp 2026-06-08 14:20, Run 47, lot CB-0419, 62 °C vs 78 °C, 71% vs 58% yield, instrument 4471, hypothesis from Run 45, author + witness initials). Referenced US first-to-invent corroborated-notebook practice and the R&D-tax systematic-progression standard.
+**Observation/Evaluation:** Contemporaneity cannot be retrofitted — a dated late entry, never a backdated one; one falsified timestamp can invalidate a dataset.
+**Conclusion:** Confirmed (this session carries a stated date — anchor).
+**Next:** The common mistake that breaks contemporaneity.
 
-**Observation / evaluation:** Engineer A's record fails **Original** (source destroyed), fails **Complete** (no failed runs, no raw data), is weak on **Contemporaneous** (written from memory hours later) and barely **Attributable** to instrument/condition. Engineer B's record is "boring" but survives cross-examination; the recorded failures *strengthen* the case by evidencing a genuine experimental arc and reduction-to-practice rather than a lucky single shot.
+## 2026-06-09 — CR: What "contemporaneous" actually means  [RUN-012] *(inferred)*
+**Objective:** Show timeliness alone proves nothing; it is one of nine attributes.
+**Activity:** Common-mistake deep dive — the "Sunday afternoon writeup": a polished weekend reconstruction is accurate/legible/complete but forensically worthless (fails C, poisons O and A). 21 CFR Part 11; system-timestamp vs instrument-data mismatch as a record-keeping failure; auditors escalate backfilling/"testing into compliance" to the most serious 483 category. Avoidance: capture at the bench; let the system stamp time; correct don't conceal; corroborate with a second source.
+**Observation/Evaluation:** Opposing counsel attacks when/how a record was made, not what it says.
+**Conclusion:** Confirmed.
+**Next:** R&D-management Stage-Gate, failure modes.
 
-**Conclusion:** Confirmed. The impressive clean summary is the weaker record. Completeness, including failures, is the load-bearing property in patent disputes and GxP audits alike.
+## 2026-06-10 — RD: Stage-Gate and where it breaks  [RUN-013] *(inferred)*
+**Objective:** Distinguish governance from bureaucracy at the gate.
+**Activity:** Stage-Gate recap (Cooper); three failure modes — gates that don't kill (95%+ pass = theatre), deliverables-as-checklist, rigidity in high-uncertainty work (hence Agile-Stage-Gate hybrids). Dissected scenario — Gate 3, polished 40-page business case projecting 22% IRR; gatekeeper asks what was learned since Gate 2 that could kill it and which single assumption sinks the 22% (unvalidated component cost) → correct call Hold/Recycle, fund a two-week spike.
+**Observation/Evaluation:** Completeness of deliverable vs reduction of the killer uncertainty = the governance/bureaucracy line.
+**Conclusion:** Confirmed.
+**Next:** Records-track — contemporaneity as master principle.
 
-**Next working hypothesis:** With the records foundation established, the curriculum should open the R&D Management track at its own foundation — why R&D is governed as a portfolio rather than a project list.
+## 2026-06-11 — CR: Contemporaneity as the master principle  [RUN-014] *(inferred)*
+**Objective:** Establish contemporaneity as the one ALCOA+ attribute that cannot be retrofitted.
+**Activity:** FRE 803(6) business-records exception ("made at or near the time… as a regular practice") as legal antecedent; ALCOA+ codification; degradation mechanism — memory (Ebbinghaus), hindsight (Fischhoff creeping determinism), incentive drift. Practical bar: record finished before the next task, never after the outcome.
+**Observation/Evaluation:** Backdating is treated as fraud, not sloppiness, because it forges the one irreparable property. (This run self-identified as "Session 1" — a prior-run-detection failure, not an actual first session.)
+**Conclusion:** Confirmed.
+**Next:** Use ALCOA+ as a grading rubric on a worked example.
 
-**Format used:** concept explanation + single dissected example. **Run sheet:** RUN-2026-06-13-01.
+## 2026-06-13 — CR: ALCOA+ as a grading rubric (battery-cycling dissected)  [RUN-015]
+**Objective:** Show completeness — including recorded failures — is what makes a record credible.
+**Activity:** ALCOA + plus four; two engineers, identical battery-cycling test — Engineer A (sticky-note → clean from-memory summary, source discarded) vs Engineer B (validated e-notebook: instrument ID, calibration date, hash-stamped raw data, two prior failed runs ~cycle 300, parameters, system timestamp, witness signature).
+**Observation/Evaluation:** A fails Original/Complete, weak on Contemporaneous/Attributable; B's recorded failures strengthen the case. The polished summary is the weaker record.
+**Conclusion:** Confirmed (stated date — anchor).
+**Next:** Open R&D-management foundations as a portfolio.
 
----
-
-## 2026-06-14 — R&D Management: R&D as a portfolio of bets (Cooper foundations)
-
-**Learning objective (working hypothesis):** Selecting an R&D slate by ranked risk-adjusted NPV alone produces a portfolio that is individually optimal but collectively misshapen; balancing Cooper's three macro-goals produces a better slate even when it means funding a lower-scored project over a higher-scored one.
-
-**Activity / sources examined:**
-- Constructed a six-project funding scenario ($10M budget, fund ≤4) spanning incremental, platform, cost-reduction, adjacent-market, moonshot, and me-too projects, each with NPV, P(tech), P(commercial), time-to-launch, strategic fit.
-- Computed risk-adjusted NPV (NPV × P(tech) × P(commercial)); naïve ranking funds B, E, D, C — all early-stage, high-risk, nothing launching <2.5 years.
-- Cooper, Edgett & Kleinschmidt portfolio-management framework: value maximization; balance (risk-reward bubble diagram — bread-and-butter / pearls / oysters / white elephants); strategic alignment (spend must mirror stated strategy).
-- Strategic-buckets method (pre-allocate budget by strategy, then rank within bucket) and the Stage-Gate vs portfolio-review distinction ("doing projects right" vs "doing the right projects").
-
-**Observation / evaluation:** The pure-NPV slate fails balance and strategic alignment: a revenue cliff and concentration in one risk class. A balanced slate (A + C near-term bread-and-butter; B as the one big oyster; E as a small staged moonshot option) deliberately drops D — the second-best score — to preserve portfolio shape. Ranking alone would have funded D and killed A, exactly backwards.
-
-**Conclusion:** Confirmed. Risk-adjusted score is an input, not the decision; portfolio value, balance and strategic alignment are governed at the slate level, complementary to (not replaced by) project-level stage-gating.
-
-**Next working hypothesis:** Returning to the Contemporaneous Records track, the practical anatomy of a defensible lab/engineering notebook entry can be derived directly from the ALCOA+ rubric established 2026-06-12/13.
-
-**Format used:** realistic scenario to think through. **Run sheet:** RUN-2026-06-14-01.
+## 2026-06-14 — RD: R&D as a portfolio of bets (Cooper foundations)  [RUN-016]
+**Objective:** Show ranked risk-adjusted NPV alone yields an individually-optimal but misshapen slate.
+**Activity:** Six-project, $10M, fund-≤4 scenario; computed risk-adjusted NPV (NPV × P_tech × P_comm); naïve ranking funds B/E/D/C (all early-stage, revenue cliff). Cooper/Edgett/Kleinschmidt three macro-goals — value maximization, balance (risk-reward bubble diagram: bread-and-butter/pearls/oysters/white-elephants), strategic alignment; strategic-buckets method; Stage-Gate vs portfolio-review distinction.
+**Observation/Evaluation:** A balanced slate (A+C near-term, B one big oyster, E small staged option) deliberately drops the second-best-scored D. Score is an input, not the decision.
+**Conclusion:** Confirmed (stated date — anchor).
+**Next:** Maintain track alternation; advance R&D-management beyond foundations (roadmapping / metrics).
