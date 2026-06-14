@@ -25,14 +25,14 @@ Per-session evidentiary run sheets. Each follows the s 355-25(1)(a)(ii) four-pha
 
 **Dating:** stated dates verbatim (29 May, 8/13/14 Jun); others inferred (±1 day); apparent gap 2026-06-12.
 
-## Integrity hashes (SHA-256, at compilation 2026-06-15)
+## Integrity hashes (SHA-256, recomputed at weekly audit 2026-06-15)
 
 ```
-f11f8d9083d911e3c53cab4b3de2d14b685bccbb0f746c6fd17a09c340c8d511  README.md
-6442ee4a77edb1450a56e3c19681fa7ec2c431eff5c6b5817eafe1e3d1e3bce8  CONTROL-REGISTER.md
-b2fc878076356293610cb73d6f6174c945cd3920c075d4c0ba7b67727d5c76b2  learning-log.md
-68280a42220002c07b9b296baf904d5d82e1fac2ae48adab89d7027da5a23dcf  curriculum/curriculum-map.md
-5a0c918573be2c0ee50c403ff32436ee01774dce2c5db4e6f357cd4b1c97db2c  docs/maintenance.md
+d7528d0e93c5ac5beebc8a376d5279d6ba74bd776641922b87b4c5b8ba5faf68  README.md
+4ad8a9eae66019449a2505ac1cb78aa85340e9ba59f3d487f04fa1f6a97478f4  CONTROL-REGISTER.md
+4f342ddb58ab5e9ad3c1139bafe29e0756444aa83eb6ed868aec6b8707660381  learning-log.md
+50348b89d8c8b439a57c8ce0e850d0f17ed96dffa4304ba061e6c5be92883f2a  curriculum/curriculum-map.md
+803fabe5dd98c2cd4a194c9506b819c6e86ab82ff6df76ad7245b9ae19d93233  docs/maintenance.md
 8b3b9a7678143e432a7395c35c2485ab55afca25563f61e4370b1405bc9b0fbd  docs/compliance-mapping.md
 0f0731bba0f8c4fdb58fb5c588afdbb1d23a504d7068a16e9bdd8874ad8eee05  hypothesis-studies/HS-2026-01.md
 5e51e269e56f80f55c9aa01fa0550397ac0dc88b43bd4419d68d5a16802eba86  hypothesis-studies/HS-2026-02.md
