@@ -84,7 +84,7 @@ const COMP=[
 ];
 const KPI=[['16','Scheduled runs'],['13','Genuine lessons'],['3','Hypothesis studies'],['3','Sprints (weeks)'],['2','Null/advisory'],['1','Partial']];
 
-const tabs=['Overview','Curriculum','Hypothesis Studies','Task Board','Compliance','Integrity'];
+const tabs=['Overview','Curriculum','Hypothesis Studies','Task Board','Compliance','Architecture','Integrity'];
 let cur='Overview';
 const nav=document.getElementById('nav'),main=document.getElementById('main');
 tabs.forEach(t=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>{cur=t;render()};nav.appendChild(b)});
@@ -137,6 +137,31 @@ function render(){
    '• Every file carries a SHA-256 hash in <code>run-sheets/INDEX.md</code>; git history and <code>archive/skill-records.bundle</code> are the immutable trail.<br>'+
    '• Known control issue: prior-run detection repeatedly failed (RUN-006/014 "Session 1"; RUN-010/013 "Day 1") → ALCOA+ over-coverage. Remediation: the control register is now the single source of progression truth.<br>'+
    '• Traceability: <code>CONTROL-REGISTER.md</code> maps every run sheet → study → weekly report → source session.</div></div>';
+ }
+
+ else if(cur==='Architecture'){
+   h+='<div class="panel"><h2>System architecture — Skills Bot + AI Agent + Application</h2>'+
+   '<div style="overflow-x:auto"><pre style="font-size:11.5px;line-height:1.45;color:var(--ink);background:var(--panel2);padding:14px;border-radius:8px;border:1px solid var(--line)">'+
+   'Host Application(s)        AI Agent (Laravel)          R&D Skills Bot\n'+
+   '  task management   ──▶    classify · audit (ALCOA+)   records + lanes\n'+
+   '  timesheet control ─▶     route to correct lane   ──▶ run-sheets / studies\n'+
+   '  document centre   ──▶    interface boundary          timesheets / documents\n'+
+   '  reports / financials ▶   artisan: audit, sync-ato    reports / financials\n'+
+   '  accounting review ──▶                            ──▶ accounting · ATO schedule\n'+
+   '                          ◀── pull        refresh ──▶  dashboard + integrity\n'+
+   '                                                       ▼  Inspector / Auditor review'+
+   '</pre></div>'+
+   '<div class="foot">The <b>AI Agent</b> (Laravel package <code>agent/</code>) is the interface between any host application and the <b>Skills Bot</b> (system of record + dashboard). It reviews, audits and routes each data point into the correct lane for Inspector/Auditor review. The Skills Bot runs the daily skill-building and keeps records + compliance current. The agent organises evidence only — no eligibility calls, no ATO lodgement.</div></div>'+
+   '<div class="panel"><h2>Connector lanes</h2><table><tr><th>Source system</th><th>Lane</th></tr>'+
+   [['Task management','task-board'],['Timesheet control','timesheets'],['Document centre','document-centre'],['Reports folders','reports'],['Financials folder','financials'],['Accounting review','accounting'],['Experimental evidence','run-sheets'],['Hypotheses','hypothesis-studies']].map(function(r){return '<tr><td>'+r[0]+'</td><td><code>'+r[1]+'</code></td></tr>'}).join('')+'</table></div>'+
+   '<div class="panel"><h2>Latest ATO R&D Tax Incentive Schedule</h2><table>'+
+   '<tr><th>Field</th><th>Value</th></tr>'+
+   '<tr><td>Schedule</td><td>R&D Tax Incentive Schedule 2026</td></tr>'+
+   '<tr><td>ATO QC</td><td>QC107004 · updated 30 May 2026</td></tr>'+
+   '<tr><td>Feeds</td><td>item 21, Company tax return 2026 (NAT 0656)</td></tr>'+
+   '<tr><td>Parts</td><td>A notional deduction · B clawback · C associates · D turnover · E offset</td></tr>'+
+   '<tr><td>Sync</td><td><code>php artisan rd-agent:sync-ato</code> (weekly)</td></tr>'+
+   '</table><div class="foot">Located from ato.gov.au 2026-06-15. Eligibility floor: notional deductions ≥ $20,000. Not tax advice.</div></div>';
  }
  main.innerHTML=h;
 }

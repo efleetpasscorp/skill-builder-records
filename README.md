@@ -39,3 +39,12 @@ The record structure is aligned to **ITAA 1997 ss 355-25 / 355-30** and AusIndus
 
 ## Provenance & integrity
 Reconstructive compilation built 2026-06-15 from verified session transcripts — openly flagged, not backdated. Stated dates: 29 May, 8 Jun, 13 Jun, 14 Jun; all others inferred (±1 day; apparent gap 12 Jun). SHA-256 hashes in `run-sheets/INDEX.md`; git history and the bundle are the immutable trail. Going forward, filing each run sheet on its own session day makes the chain fully contemporaneous.
+
+## System: Skills Bot + AI Agent + Application
+Beyond the records, this repo ships the automation that keeps them current and inspection-ready:
+- **`agent/`** — `rd-compliance-agent`, a Laravel-installable **AI Agent** that plugs into any host application, reviews/audits data records (ALCOA+-aligned), and routes them into the correct skills-manager lane for Inspector/Auditor review. It is the interface between the application server and the **R&D Skills Bot**.
+- **R&D Skills Bot** — the records/dashboard backend that runs the daily skill-building, keeps the compliance framework current, and refreshes the dashboard.
+- **`docs/architecture.md`** — how the three components and the connectors (task mgmt, timesheet, document centre, reports, financials, accounting) fit together.
+- **`docs/ato-schedule.md`** — the latest located ATO R&D Tax Incentive Schedule (2026, QC107004) and how `rd-agent:sync-ato` keeps it current.
+
+The **Architecture** tab on the dashboard visualises this. The agent organises and audits evidence only — it makes no eligibility determinations and lodges nothing with the ATO. Not tax or legal advice.
