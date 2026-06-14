@@ -105,3 +105,14 @@
 **Observation/Evaluation:** A balanced slate (A+C near-term, B one big oyster, E small staged option) deliberately drops the second-best-scored D. Score is an input, not the decision.
 **Conclusion:** Confirmed (stated date — anchor).
 **Next:** Maintain track alternation; advance R&D-management beyond foundations (roadmapping / metrics).
+
+
+---
+
+## 2026-06-15 — AUTOMATED COMPLIANCE AUDIT (Skills Bot, weekly) — no new learning session
+**Type:** Maintenance/audit run, *not* an R&D learning lesson. Filed same-day (contemporaneous).
+**Regulatory refresh:** Re-checked ato.gov.au QC107004 — *R&D tax incentive schedule 2026*, **Last updated 30 May 2026** (unchanged), item 21 / NAT 0656. No regulatory change; `docs/ato-schedule.md` carries a re-verification stamp.
+**Session audit:** No new "Daily skill builder rd records" *learning* session since RUN-016 (2026-06-14). The only post-RUN-016 session activity was inside build session `b20e5834` — the same 2026-06-14 session that produced RUN-016 and stood up this records system — which on the evening of 2026-06-14 added a Connectors settings tab to the dashboard and scheduled this weekly bot. That is records-system infrastructure/maintenance, not a learning lesson, so **no new run sheet is created** (honesty rule: do not invent activity).
+**Integrity:** SHA-256 manifest in `run-sheets/INDEX.md` recomputed for all files; traceability (16 runs -> 3 studies -> 3 weekly reports -> sources) re-checked and intact.
+**Studies:** HS-2026-01/02/03 unchanged (no new contributing sessions); no new HS opened.
+**Next:** Next genuine daily-learning session (expected R&D Management per forward plan) becomes RUN-017.

@@ -45,7 +45,7 @@ code{background:#22303f;padding:1px 5px;border-radius:4px;font-size:11px}
 <body>
 <header>
  <h1>R&amp;D Skill-Builder Dashboard</h1>
- <div class="tag">Live view of Leonardo's daily skill-builder curriculum — R&amp;D Management &amp; Contemporaneous Records — managed as an Agile hypothesis pipeline and kept inspection-ready under ITAA 1997 s 355-25. Snapshot 2026-06-15. Source of record: the <a href="https://github.com/efleetpasscorp/skill-builder-records" target="_blank" rel="noopener">skill-builder-records</a> repository.</div>
+ <div class="tag">Live view of Leonardo's daily skill-builder curriculum — R&amp;D Management &amp; Contemporaneous Records — managed as an Agile hypothesis pipeline and kept inspection-ready under ITAA 1997 s 355-25. Snapshot 2026-06-15; last automated audit 2026-06-15 (no new sessions since RUN-016). Source of record: the <a href="https://github.com/efleetpasscorp/skill-builder-records" target="_blank" rel="noopener">skill-builder-records</a> repository.</div>
 </header>
 <nav id="nav"></nav>
 <main id="main"></main>
@@ -132,6 +132,7 @@ function render(){
  else if(cur==='Integrity'){
    h+='<div class="panel"><h2>Provenance & integrity</h2><div class="foot" style="font-size:13px">'+
    '• Reconstructive compilation built 2026-06-15 from verified session transcripts — openly flagged, not backdated.<br>'+
+   '• Weekly automated audit began 2026-06-15; first run found no new learning session since RUN-016 and no ATO change (QC107004, 30 May 2026) — see CONTROL-REGISTER §6.<br>'+
    '• 16 runs documented: 13 genuine, 1 partial (RUN-006), 2 non-productive (RUN-004 advisory, RUN-009 null API error). Nothing omitted.<br>'+
    '• Dating: stated for RUN-001/011/015/016; all others inferred (±1 day); apparent gap 12 Jun.<br>'+
    '• Every file carries a SHA-256 hash in <code>run-sheets/INDEX.md</code>; git history and <code>archive/skill-records.bundle</code> are the immutable trail.<br>'+

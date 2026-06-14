@@ -2,7 +2,7 @@
 
 **Purpose.** This is the single entry point and control document for the skill-builder contemporaneous records. It governs the evidence chain end-to-end — **Hypothesis Study → Run Sheets → Weekly Report → Learning Log → source session** — so an R&D inspector (e.g. AusIndustry under ITAA 1997 s 355-25) can trace any claim of activity to its dated, hashed evidence and see what is open, confirmed, or unverifiable.
 
-**Compiled:** 2026-06-15 (reconstructive — see Provenance). **Owner:** daily-skill-builder-rd-records (for Leonardo).
+**Compiled:** 2026-06-15 (reconstructive — see Provenance). **Last automated audit:** 2026-06-15 (first weekly Skills Bot run; no new sessions — see §6). **Owner:** daily-skill-builder-rd-records (for Leonardo).
 
 ---
 
@@ -67,3 +67,11 @@ Weekly reports: week-01 = `weekly-reports/2026-05-31-week-01.md`; week-02 = `…
 
 ## 5. Provenance
 Reconstructive compilation built 2026-06-15 from verified session transcripts; openly flagged, not backdated. Going forward, each run sheet and this register should be updated on the session day to keep the chain fully contemporaneous.
+
+---
+
+## 6. Audit log (automated weekly Skills Bot runs)
+
+| Audit date | Trigger | New learning sessions | Regulatory change | Integrity | Notes |
+|---|---|---|---|---|---|
+| 2026-06-15 | Skills Bot (weekly, Mon) — first scheduled run | None since RUN-016 | None — ATO QC107004 still "Last updated 30 May 2026" | Hash manifest recomputed; traceability intact | Post-RUN-016 activity in build session `b20e5834` was dashboard/infra maintenance (Connectors tab) + scheduling this bot, not a learning lesson — no run sheet created. |
