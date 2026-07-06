@@ -32,7 +32,7 @@
 <body>
 <header>
   <h1>Skill-Builder R&amp;D Task Board <span style="font-weight:400;color:var(--mut);font-size:14px">· Agile hypothesis management</span></h1>
-  <div class="sub">Trello-style Kanban operationalising the contemporaneous-records control register. <b>Epics = Hypothesis Studies</b>, <b>cards = run sheets / backlog hypotheses</b>, <b>sprints = weeks</b>. Columns map to the ITAA 1997 s 355-25 systematic-progression phases (hypothesis → experiment → observation/evaluation → conclusion) plus Done and Blocked. Static snapshot compiled 2026-06-15; the source of truth is <code>CONTROL-REGISTER.md</code>.</div>
+  <div class="sub">Trello-style Kanban operationalising the contemporaneous-records control register. <b>Epics = Hypothesis Studies</b>, <b>cards = run sheets / backlog hypotheses</b>, <b>sprints = weeks</b>. Columns map to the ITAA 1997 s 355-25 systematic-progression phases (hypothesis → experiment → observation/evaluation → conclusion) plus Done and Blocked. Static snapshot refreshed 2026-06-30 (RUN-024…030 added); the source of truth is <code>CONTROL-REGISTER.md</code>.</div>
   <div class="legend">
     <span><i class="dot" style="background:var(--hs1)"></i>HS-2026-01 ALCOA+ data integrity</span>
     <span><i class="dot" style="background:var(--hs2)"></i>HS-2026-02 Legal defensibility</span>
@@ -55,12 +55,13 @@ const cols=[
    {e:'HS2',track:'CR',txt:'Litigation hold / spoliation'},
    {e:'HS2',track:'CR',txt:'Patent inventorship in dispute'},
    {e:'HS3',track:'RD',txt:'Technology roadmapping'},
-   {e:'HS3',track:'RD',txt:'R&D metrics / productivity (Stevens)'},
    {e:'HS3',track:'RD',txt:'Managing scientists & engineers'},
    {e:'HS3',track:'RD',txt:'IP strategy'},
+   {e:'HS2',track:'CR',txt:'⚠ HS-02 starved — no card fed for 4 weeks (wk-03…wk-06)'},
  ]},
  {t:'Hypothesis defined (next up)',cards:[
-   {e:'HS3',track:'RD',txt:'R&D metrics / productivity',meta:'Selected next — balances the thin RD track'},
+   {e:'HS1',track:'CR',txt:'21 CFR Part 11 audit-trail / chain-of-custody',meta:'Next up — CR after a 5-RD week; feeds starved HS-02. R&D metrics card DONE at RUN-034 (first advance)'},
+   {e:'HS3',track:'RD',txt:'Technology roadmapping',meta:'Next RD card once Records rotates back'},
  ]},
  {t:'Experiment (in progress)',cards:[]},
  {t:'Observation & evaluation',cards:[]},
@@ -78,6 +79,26 @@ const cols=[
    {id:'RUN-014',e:'HS1',track:'CR',txt:'Contemporaneity as master principle',meta:'11 Jun · wk-03 ✓'},
    {id:'RUN-015',e:'HS1',track:'CR',txt:'ALCOA+ as a grading rubric',meta:'13 Jun · wk-03 ✓'},
    {id:'RUN-016',e:'HS3',track:'RD',txt:'R&D as a portfolio of bets (Cooper)',meta:'14 Jun · wk-03 ✓'},
+   {id:'RUN-017',e:'HS3',track:'RD',txt:'R&D as managed uncertainty',meta:'15 Jun · wk-04 ✓ (foundational repeat)'},
+   {id:'RUN-018',e:'HS1',track:'CR',txt:'ALCOA/ALCOA+ + dissected example',meta:'16 Jun · wk-04 ✓ (foundational repeat)'},
+   {id:'RUN-019',e:'HS3',track:'RD',txt:'What portfolio mgmt optimizes for',meta:'17 Jun · wk-04 ✓ (foundational repeat)'},
+   {id:'RUN-020',e:'HS3',track:'RD',txt:'Irreducible uncertainty (options not projects)',meta:'18 Jun · wk-04 ✓ (foundational repeat)'},
+   {id:'RUN-021',e:'HS3',track:'RD',txt:'Stage-Gate as a decision framework',meta:'19 Jun · wk-04 ✓ (foundational repeat)'},
+   {id:'RUN-022',e:'HS1',track:'CR',txt:'ALCOA+ + hands-on critique',meta:'20 Jun · wk-04 ✓ (foundational repeat; weekday mislabeled)'},
+   {id:'RUN-023',e:'HS3',track:'RD',txt:'Portfolio fundamentals (ranking vs buckets)',meta:'21 Jun · wk-04 ✓ (foundational repeat)'},
+   {id:'RUN-024',e:'HS1',track:'CR',txt:'What "contemporaneous" means (ALCOA+ criteria)',meta:'22 Jun · wk-05 ✓ (foundational repeat)'},
+   {id:'RUN-025',e:'HS1',track:'CR',txt:'ALCOA/ALCOA+ foundations + dissection',meta:'23 Jun · wk-05 ✓ (foundational repeat; inferred date)'},
+   {id:'RUN-026',e:'HS3',track:'RD',txt:'Portfolio — three competing goals (Cooper)',meta:'24 Jun · wk-05 ✓ (foundational repeat)'},
+   {id:'RUN-027',e:'HS3',track:'RD',txt:'Stage-Gate as a decision architecture',meta:'25 Jun · wk-05 ✓ (foundational repeat)'},
+   {id:'RUN-028',e:'HS1',track:'CR',txt:'The four properties of a record that holds up',meta:'26 Jun · wk-05 ✓ (foundational repeat)'},
+   {id:'RUN-029',e:'HS1',track:'CR',txt:'ALCOA+ data integrity + dissection',meta:'27 Jun · wk-05 ✓ (foundational repeat; inferred date)'},
+   {id:'RUN-030',e:'HS3',track:'RD',txt:'Innovation funnel & Stage-Gate (kill points)',meta:'28 Jun · wk-05 ✓ (foundational repeat; near-duplicate of RUN-027)'},
+   {id:'RUN-031',e:'HS3',track:'RD',txt:'Portfolio — 3 goals, bubbles, productivity index',meta:'29 Jun · wk-06 ✓ (foundational repeat; inferred date)'},
+   {id:'RUN-032',e:'HS3',track:'RD',txt:'Stage-Gate governance backbone',meta:'30 Jun · wk-06 ✓ (foundational repeat)'},
+   {id:'RUN-033',e:'HS1',track:'CR',txt:'ALCOA+ framework + scored-entry exercise',meta:'1 Jul · wk-06 ✓ (foundational repeat; inferred, corroborated)'},
+   {id:'RUN-034',e:'HS3',track:'RD',txt:'★ R&D metrics (Stevens) — NEW; first advance & first successful prior-run detection',meta:'2 Jul · wk-06 ✓ (backlog card cleared)'},
+   {id:'RUN-035',e:'HS3',track:'RD',txt:'Portfolio fundamentals — three goals',meta:'~3 Jul · wk-06 ✓ (foundational repeat; inferred ±1)'},
+   {id:'RUN-036',e:'HS3',track:'RD',txt:'Portfolio — four goals & silting',meta:'~5 Jul · wk-06 ✓ (foundational repeat; inferred ±1)'},
  ]},
  {t:'Blocked / needs rework',cards:[
    {id:'RUN-006',e:'HS1',track:'CR',txt:'Foundations — lesson not recoverable',meta:'3 Jun · ⚠ partial · recover log / re-run',blk:1},
