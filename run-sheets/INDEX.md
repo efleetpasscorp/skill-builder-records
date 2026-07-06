@@ -34,31 +34,20 @@ Per-session evidentiary run sheets. Each follows the s 355-25(1)(a)(ii) four-pha
 | RUN-028 | 2026-06-26 (stated) | Contemporaneous Records | Genuine | HS-2026-01 |
 | RUN-029 | 2026-06-27 (inferred) | Contemporaneous Records | Genuine | HS-2026-01 |
 | RUN-030 | 2026-06-28 (stated) | R&D Management | Genuine | HS-2026-03 |
+| RUN-031 | 2026-06-29 (inferred) | R&D Management | Genuine | HS-2026-03 |
+| RUN-032 | 2026-06-30 (stated) | R&D Management | Genuine | HS-2026-03 |
+| RUN-033 | 2026-07-01 (inferred; corroborated) | Contemporaneous Records | Genuine | HS-2026-01 |
+| RUN-034 | 2026-07-02 (stated) | R&D Management | Genuine — first curriculum advance | HS-2026-03 |
+| RUN-035 | 2026-07-03 (inferred ±1) | R&D Management | Genuine | HS-2026-03 |
+| RUN-036 | 2026-07-05 (inferred ±1) | R&D Management | Genuine | HS-2026-03 |
 
 \* RUN-006 partial; tentatively HS-2026-01 pending content recovery.
 
-**Dating:** stated dates verbatim (29 May, 8/13/14/15/16/22/24/25/26/28 Jun); RUN-022 stated 20 Jun but mislabeled "Friday" (actually Saturday); RUN-026 stated 24 Jun without weekday; others inferred (±1 day) — week-05 inferred dates RUN-025 (23 Jun) & RUN-029 (27 Jun) each carry an internal worked-example date; apparent gaps 2026-06-12 & 2026-06-29; week-04 & week-05 = clean 15–21 & 22–28 Jun daily runs.
+**Dating:** stated dates verbatim (29 May, 8/13/14/15/16/22/24/25/26/28/30 Jun, 2 Jul); RUN-022 stated 20 Jun but mislabeled "Friday" (actually Saturday); RUN-026 stated 24 Jun without weekday; others inferred (±1 day) — RUN-025 (23 Jun) & RUN-029 (27 Jun) each carry an internal worked-example date; RUN-033 (1 Jul) corroborated by RUN-034's in-session review. Apparent gaps: 2026-06-12 and one indeterminable day in 3–5 Jul. **Correction (2026-07-06):** the previously flagged 29 Jun gap is withdrawn — RUN-031 fills it. Weeks 04–05 = clean daily runs; week-06 = 6 of 7 days.
 
-## Integrity hashes (SHA-256, recomputed at weekly audit 2026-06-30)
+## Integrity hashes (SHA-256, recomputed at weekly audit 2026-07-06)
 
 ```
-f674307e134db710397b7d1e4d5e66b9f528b651f76e1daf8dfb236e5fb3990e  README.md
-9f4a2ac19af8164cb79460a98c3dad4d0499ab79f1d1d75e2fcfae678b206992  CONTROL-REGISTER.md
-df865a43345ecdf4eae633530ae81bfbdc0526fc4ab703d899b511c7fea13f8c  learning-log.md
-ec960d2a30385f44712d825612aa2f73746878feb6023684ef630523a1745692  curriculum/curriculum-map.md
-803fabe5dd98c2cd4a194c9506b819c6e86ab82ff6df76ad7245b9ae19d93233  docs/maintenance.md
-8b3b9a7678143e432a7395c35c2485ab55afca25563f61e4370b1405bc9b0fbd  docs/compliance-mapping.md
-39b4862de8c87a95c719f6cd394ff0318a00b0912b8ec223ca6007bcb9a4262c  docs/ato-schedule.md
-54908b39280139ef9f90aa02c2b2acc02304fa253c2b60ae2222f2e6da97c52d  docs/architecture.md
-b8cbf75aa44fade1cd82d0f60df35426e1ffb006d4a8ef70548f5d95acdbb01b  hypothesis-studies/HS-2026-01.md
-5e51e269e56f80f55c9aa01fa0550397ac0dc88b43bd4419d68d5a16802eba86  hypothesis-studies/HS-2026-02.md
-6fdc60260cb42468c57ae74d9d3616a4e2b2367fef513f30223ba39ea5042a20  hypothesis-studies/HS-2026-03.md
-0f32c9c05265376cd46f8513238c695f8c0f3877c32be43991e20929433345de  hypothesis-studies/INDEX.md
-e1f1d2f19cdf36f6fe24996bc0b02702805daa83dbe98e6a7e73fcb7b2af5fee  weekly-reports/2026-05-31-week-01.md
-4c109e2374f4e717e8d2d29fd356afaf463966493a9044d21d65f8f6c93e306a  weekly-reports/2026-06-07-week-02.md
-49a2f84bfff42235be3f66973fa1410a810ea7da68ed58d6b92488d3a5878c9b  weekly-reports/2026-06-14-week-03.md
-34d61fec5cf442661a4935121c428a419421603139a8e0099a6c80696e691fb4  weekly-reports/2026-06-21-week-04.md
-905951b71964da49676e8a226af7ab26e9d79a3aaee5b5b14b72e10b1dd8db38  weekly-reports/2026-06-28-week-05.md
 1846e3f67d8b04d50d50011d6d10956b4c0632811ac14035bc8ff029145ebd47  run-sheets/RUN-001-2026-05-29.md
 8a603b056d456ffe532d546e232616e8c0e9268f8b4df42f904c448e63b0bcbb  run-sheets/RUN-002-2026-05-30.md
 41c05f0c3d02e976f0e209a5f1d0222eafaa939f2d7a1f23fcc7f3d22d40aa81  run-sheets/RUN-003-2026-05-31.md
@@ -89,9 +78,33 @@ c5a9f8d701b83d2030c43b4191d50fe0e96121bbbd64873262041c1bcd8c25ee  run-sheets/RUN
 aea9506455043710889a7b642335db982c53bd5997cb5ee62429b47dc802c643  run-sheets/RUN-028-2026-06-26.md
 eb8c634e8b30908e98328c825b81392d5572b97040fe8985e31bc2f24f0fcd29  run-sheets/RUN-029-2026-06-27.md
 66aaec4cacc029985106eb5afe645d1a506198781d1016aea2f577e60a0347a5  run-sheets/RUN-030-2026-06-28.md
-d679c5ef1ac93f05a285fae1c7d837a58e15b5bad866b1bac151f8f98fbde007  index.html
-a2e8f85a7bbf2e08640b83e0759bcf7e97709b385b21297cf3675e34b7047bf2  task-board.md
-aa68ee4f8e3da0d50952d6e60065247b756edb1d44d98136cbfaa4da07ba196a  task-board.html
+6bcfc0bc915e6cc9acc7375cf0c824920c4e413db7dd51d93f05fc4cca6e9680  run-sheets/RUN-031-2026-06-29.md
+4fef28f5f437c7b910b3ae75e191635d98b3ad0673c94d96c19bfa642558f032  run-sheets/RUN-032-2026-06-30.md
+6acd151d053e6ad01c039090242e4a64b72ddc6f1a2799f07e6f39eb28cedd6f  run-sheets/RUN-033-2026-07-01.md
+cb8ca833843166a19eafa0dd84285546e9c5820d1d7d88b5d0129f8d2a4cbdd2  run-sheets/RUN-034-2026-07-02.md
+362b52eff54e1cfec7f8cb6dac0bb6eae74905609262d76a2122097cd2728c76  run-sheets/RUN-035-2026-07-03.md
+13acc17e18c16ef34a0356232de1a40f20d1c598ac8746e959549a0e6a08019d  run-sheets/RUN-036-2026-07-05.md
+e1f1d2f19cdf36f6fe24996bc0b02702805daa83dbe98e6a7e73fcb7b2af5fee  weekly-reports/2026-05-31-week-01.md
+4c109e2374f4e717e8d2d29fd356afaf463966493a9044d21d65f8f6c93e306a  weekly-reports/2026-06-07-week-02.md
+49a2f84bfff42235be3f66973fa1410a810ea7da68ed58d6b92488d3a5878c9b  weekly-reports/2026-06-14-week-03.md
+34d61fec5cf442661a4935121c428a419421603139a8e0099a6c80696e691fb4  weekly-reports/2026-06-21-week-04.md
+905951b71964da49676e8a226af7ab26e9d79a3aaee5b5b14b72e10b1dd8db38  weekly-reports/2026-06-28-week-05.md
+56339ef24451455590753ab21237896ce836b8b95a1ab68bbca999db35eda400  weekly-reports/2026-07-05-week-06.md
+74b855be0c83e839ed2ad961819020db98251ebe50092d48b6ac9f0f9a78d8f1  hypothesis-studies/HS-2026-01.md
+5e51e269e56f80f55c9aa01fa0550397ac0dc88b43bd4419d68d5a16802eba86  hypothesis-studies/HS-2026-02.md
+d977bde7fd1b7654b5a101dd25eea70990b9510a024f8db03f1c6876d5da6dfb  hypothesis-studies/HS-2026-03.md
+25ea264e56f30c33defbf793a1fa705a0a7e80e420a3bb745c6ec67bc16086e7  hypothesis-studies/INDEX.md
+e5af1bcc67ded923600c1f8e80cf670172ae153b866e92d758ae08cee68c8e46  CONTROL-REGISTER.md
+eb4fb129eac93ca011900c18bc1ce60eef1774b620a826cef439c16a3512e4e6  README.md
+e58c25451419bbf9602d2fe25c633dd4cabd3d68584b0755730c999b5c785fab  learning-log.md
+38e75bd1e05ecfb39d4dce37818822cd5148216ecbbe7f7cbbe2ad5cab016ce6  curriculum/curriculum-map.md
+54908b39280139ef9f90aa02c2b2acc02304fa253c2b60ae2222f2e6da97c52d  docs/architecture.md
+047ced1a3f1e3376d47d8639796b2c2838218efa9a5c2f75b11d09d9d29f7165  docs/ato-schedule.md
+8b3b9a7678143e432a7395c35c2485ab55afca25563f61e4370b1405bc9b0fbd  docs/compliance-mapping.md
+803fabe5dd98c2cd4a194c9506b819c6e86ab82ff6df76ad7245b9ae19d93233  docs/maintenance.md
+3820e4bc302f4a59c44d7f39604feba2f5d228a017ac971570b70abf3ae13bc2  index.html
+c4393455a09e307ea444dc7c28508b28cc66ddc2bd2fc713ca66910568927344  task-board.md
+a6dba3c0208a1511e3c0b02868c0532895276f1b287d30823cadc6e89ab3624c  task-board.html
 ```
 
-*Manifest scope (2026-06-30):* covers all evidentiary markdown (now 30 run sheets, 5 weekly reports, 3 studies + index, control register, learning log, curriculum map), the complete `docs/` set, the dashboard (`index.html`) and both task-board files. `run-sheets/INDEX.md` is intentionally not self-hashed. Pre-change re-verification of the prior (2026-06-22) manifest: 42/42 files matched.
+*Manifest scope (2026-07-06):* covers all evidentiary markdown (now 36 run sheets, 6 weekly reports, 3 studies + index, control register, learning log, curriculum map), the complete `docs/` set, the dashboard (`index.html`) and both task-board files. `run-sheets/INDEX.md` is intentionally not self-hashed. Re-verification against the prior (2026-06-30) manifest: all 39 files NOT touched by this audit matched exactly. Honest note: the 11 files edited by this audit were checked against the prior manifest only after editing had begun (so their pre-edit state was not independently re-verified this run); they were re-hashed post-edit. Future runs should verify the full manifest before any edit.
