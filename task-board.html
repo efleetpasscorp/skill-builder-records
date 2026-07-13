@@ -32,7 +32,7 @@
 <body>
 <header>
   <h1>Skill-Builder R&amp;D Task Board <span style="font-weight:400;color:var(--mut);font-size:14px">· Agile hypothesis management</span></h1>
-  <div class="sub">Trello-style Kanban operationalising the contemporaneous-records control register. <b>Epics = Hypothesis Studies</b>, <b>cards = run sheets / backlog hypotheses</b>, <b>sprints = weeks</b>. Columns map to the ITAA 1997 s 355-25 systematic-progression phases (hypothesis → experiment → observation/evaluation → conclusion) plus Done and Blocked. Static snapshot refreshed 2026-06-30 (RUN-024…030 added); the source of truth is <code>CONTROL-REGISTER.md</code>.</div>
+  <div class="sub">Trello-style Kanban operationalising the contemporaneous-records control register. <b>Epics = Hypothesis Studies</b>, <b>cards = run sheets / backlog hypotheses</b>, <b>sprints = weeks</b>. Columns map to the ITAA 1997 s 355-25 systematic-progression phases (hypothesis → experiment → observation/evaluation → conclusion) plus Done and Blocked. Static snapshot refreshed 2026-07-13 (RUN-037…043 added, 6–12 Jul — all foundational repeats); the source of truth is <code>CONTROL-REGISTER.md</code>.</div>
   <div class="legend">
     <span><i class="dot" style="background:var(--hs1)"></i>HS-2026-01 ALCOA+ data integrity</span>
     <span><i class="dot" style="background:var(--hs2)"></i>HS-2026-02 Legal defensibility</span>
@@ -57,10 +57,10 @@ const cols=[
    {e:'HS3',track:'RD',txt:'Technology roadmapping'},
    {e:'HS3',track:'RD',txt:'Managing scientists & engineers'},
    {e:'HS3',track:'RD',txt:'IP strategy'},
-   {e:'HS2',track:'CR',txt:'⚠ HS-02 starved — no card fed for 4 weeks (wk-03…wk-06)'},
+   {e:'HS2',track:'CR',txt:'⚠ HS-02 starved — no card fed for 5 weeks (wk-03…wk-07)'},
  ]},
  {t:'Hypothesis defined (next up)',cards:[
-   {e:'HS1',track:'CR',txt:'21 CFR Part 11 audit-trail / chain-of-custody',meta:'Next up — CR after a 5-RD week; feeds starved HS-02. R&D metrics card DONE at RUN-034 (first advance)'},
+   {e:'HS1',track:'CR',txt:'21 CFR Part 11 audit-trail / chain-of-custody',meta:'Top card; feeds starved HS-02. Week-07 gave 5 more ALCOA+ repeats (~20×) instead. R&D metrics DONE at RUN-034 (only advance)'},
    {e:'HS3',track:'RD',txt:'Technology roadmapping',meta:'Next RD card once Records rotates back'},
  ]},
  {t:'Experiment (in progress)',cards:[]},
@@ -99,6 +99,13 @@ const cols=[
    {id:'RUN-034',e:'HS3',track:'RD',txt:'★ R&D metrics (Stevens) — NEW; first advance & first successful prior-run detection',meta:'2 Jul · wk-06 ✓ (backlog card cleared)'},
    {id:'RUN-035',e:'HS3',track:'RD',txt:'Portfolio fundamentals — three goals',meta:'~3 Jul · wk-06 ✓ (foundational repeat; inferred ±1)'},
    {id:'RUN-036',e:'HS3',track:'RD',txt:'Portfolio — four goals & silting',meta:'~5 Jul · wk-06 ✓ (foundational repeat; inferred ±1)'},
+   {id:'RUN-037',e:'HS1',track:'CR',txt:'Evidentiary weight of contemporaneity + ALCOA+',meta:'6 Jul · wk-07 ✓ (foundational repeat; partial detection; inferred)'},
+   {id:'RUN-038',e:'HS3',track:'RD',txt:'Portfolio — Cooper 3 goals + bubble diagram',meta:'7 Jul · wk-07 ✓ (foundational repeat; detection failed; stated)'},
+   {id:'RUN-039',e:'HS3',track:'RD',txt:'Stage-Gate & discovery-vs-delivery',meta:'8 Jul · wk-07 ✓ (foundational repeat; detection failed; inferred)'},
+   {id:'RUN-040',e:'HS1',track:'CR',txt:'ALCOA+ via bad-vs-good lab entry',meta:'9 Jul · wk-07 ✓ (foundational repeat; partial detection; inferred)'},
+   {id:'RUN-041',e:'HS1',track:'CR',txt:'ALCOA+ foundational + dissect the bad record',meta:'10 Jul · wk-07 ✓ (foundational repeat; detection failed; inferred)'},
+   {id:'RUN-042',e:'HS1',track:'CR',txt:'What "contemporaneous" means + eng-log rewrite',meta:'11 Jul · wk-07 ✓ (foundational repeat; detection failed; inferred)'},
+   {id:'RUN-043',e:'HS1',track:'CR',txt:'ALCOA+ framework + dissected assay example',meta:'12 Jul · wk-07 ✓ (foundational repeat; detection failed; inferred)'},
  ]},
  {t:'Blocked / needs rework',cards:[
    {id:'RUN-006',e:'HS1',track:'CR',txt:'Foundations — lesson not recoverable',meta:'3 Jun · ⚠ partial · recover log / re-run',blk:1},

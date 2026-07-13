@@ -11,7 +11,7 @@ A Trello-style board that operationalises the control register as a working task
 | Board | This curriculum's hypothesis pipeline |
 | Epic | **Hypothesis Study** (HS-2026-01/02/03) |
 | Card / Story | **Run sheet** (one session) or a backlog hypothesis |
-| Sprint | **Week** (week-01 … week-05) |
+| Sprint | **Week** (week-01 … week-07) |
 | Label | Track (Contemporaneous Records / R&D Management) + Study |
 | Definition of Done | Conclusion engages the hypothesis (confirmed / partial / refuted) **and** run sheet filed, hashed, linked to study + weekly report |
 | Column (workflow state) | The four s 355-25 phases + Done/Blocked |
@@ -30,11 +30,11 @@ A Trello-style board that operationalises the control register as a working task
 - **[HS-03] Technology roadmapping** *(RD)*
 - **[HS-03] Managing scientists & engineers** *(RD)*
 - **[HS-03] IP strategy** *(RD)*
-- **⚠ [HS-02] starved — no new card fed for 4 weeks (wk-03…wk-06); litigation hold/spoliation and inventorship-in-dispute still unaddressed**
+- **⚠ [HS-02] starved — no new card fed for 5 weeks (wk-03…wk-07); litigation hold/spoliation and inventorship-in-dispute still unaddressed**
 
 ## HYPOTHESIS DEFINED (ready for next run)
-- **[HS-01→new study] 21 CFR Part 11 audit-trail mechanics / chain-of-custody** *(CR)* ← next per track-alternation rule (week-06 ran 5 RD / 1 CR); would also feed starved HS-02. Deferred ~12 sessions; open as a fresh CR thread instead of re-confirming ALCOA+ a 16th time.
-- **[HS-03] Technology roadmapping** *(RD)* — the next RD card after Records rotates back. (R&D metrics card was **done at RUN-034** — the first session to advance rather than restart.)
+- **[HS-01→new study] 21 CFR Part 11 audit-trail mechanics / chain-of-custody** *(CR)* ← still the top card; would also feed starved HS-02. Week-07 instead re-confirmed ALCOA+ five more times (~20× total); open this as a fresh CR thread rather than a 21st ALCOA+ repeat.
+- **[HS-03] Technology roadmapping** *(RD)* — the next RD card; week-07's two RD sessions (RUN-038/039) restarted portfolio & Stage-Gate instead. (R&D metrics card was **done at RUN-034** — still the only session to advance rather than restart.)
 
 ## EXPERIMENT (in progress)
 - *(none — no session mid-flight)*
@@ -43,9 +43,9 @@ A Trello-style board that operationalises the control register as a working task
 - *(none)*
 
 ## CONCLUDED ✓ (Definition of Done met)
-**Epic HS-2026-01 — ALCOA+ data integrity (15 cards):** RUN-002, RUN-003, RUN-005, RUN-011, RUN-012, RUN-014, RUN-015, RUN-018, RUN-022, RUN-024, RUN-025, RUN-028, RUN-029, RUN-033 ✓ · RUN-006 ⚠ partial
+**Epic HS-2026-01 — ALCOA+ data integrity (20 cards):** RUN-002, RUN-003, RUN-005, RUN-011, RUN-012, RUN-014, RUN-015, RUN-018, RUN-022, RUN-024, RUN-025, RUN-028, RUN-029, RUN-033, RUN-037, RUN-040, RUN-041, RUN-042, RUN-043 ✓ · RUN-006 ⚠ partial
 **Epic HS-2026-02 — Legal defensibility (2 cards):** RUN-001 ✓ · RUN-008 ✓
-**Epic HS-2026-03 — R&D portfolio & stage-gate (17 cards):** RUN-007 ✓ · RUN-010 ✓ · RUN-013 ✓ · RUN-016 ✓ · RUN-017 ✓ · RUN-019 ✓ · RUN-020 ✓ · RUN-021 ✓ · RUN-023 ✓ · RUN-026 ✓ · RUN-027 ✓ · RUN-030 ✓ · RUN-031 ✓ · RUN-032 ✓ · **RUN-034 ✓★ (R&D metrics — backlog card cleared; first curriculum advance)** · RUN-035 ✓ · RUN-036 ✓
+**Epic HS-2026-03 — R&D portfolio & stage-gate (19 cards):** RUN-007 ✓ · RUN-010 ✓ · RUN-013 ✓ · RUN-016 ✓ · RUN-017 ✓ · RUN-019 ✓ · RUN-020 ✓ · RUN-021 ✓ · RUN-023 ✓ · RUN-026 ✓ · RUN-027 ✓ · RUN-030 ✓ · RUN-031 ✓ · RUN-032 ✓ · **RUN-034 ✓★ (R&D metrics — backlog card cleared; only curriculum advance)** · RUN-035 ✓ · RUN-036 ✓ · RUN-038 ✓ · RUN-039 ✓
 
 ## BLOCKED / NEEDS REWORK
 - **RUN-006** ⚠ partial — lesson body not recoverable; *task: recover saved log file or re-run topic*
@@ -64,6 +64,7 @@ A Trello-style board that operationalises the control register as a working task
 | week-04 (15–21 Jun) | 7 | HS-01, HS-03 | Highest volume, lowest progression — all 7 re-taught foundations (prior-run detection failed in every session); track-alternation breached (3 RD days running) |
 | week-05 (22–28 Jun) | 7 | HS-01, HS-03 | Pattern repeats — all 7 re-taught foundations (CR/ALCOA+ ×4, RD ×3 incl. stage-gate twice); track-alternation breached (CR back-to-back 22–23 Jun); HS-02 still starved |
 | week-06 (29 Jun–5 Jul) | 6 (1 gap day) | HS-01, HS-03 | **Breakthrough + regression:** RUN-034 first-ever successful prior-run detection → new material (R&D metrics, backlog card done). Other 5 restarted foundations; track balance 5 RD / 1 CR; HS-02 starved 4th week |
+| week-07 (6–12 Jul) | 7 (complete week) | HS-01, HS-03 | **Full regression:** no advance; 5 ALCOA+ repeats + portfolio + Stage-Gate. RUN-037/040 partial detection; RUN-038/039/041/042/043 fresh "Day 1"s; track balance 5 CR / 2 RD; HS-02 starved 5th week |
 
 ## WIP / control rules
 1. One session = one card; card is Done only when its run sheet is filed, hashed, and linked to a study + weekly report.

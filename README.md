@@ -18,7 +18,7 @@ Record-keeping repository for Leonardo's daily skill-builder curriculum, coverin
 ├── hypothesis-studies/          Multi-session inquiries (the controlled hypotheses)
 │   ├── INDEX.md
 │   └── HS-2026-NN.md
-├── weekly-reports/              Weekly syntheses (week-01 … week-06)
+├── weekly-reports/              Weekly syntheses (week-01 … week-07)
 ├── curriculum/
 │   └── curriculum-map.md        Tracks, progression, study mapping, known gaps
 ├── docs/
@@ -32,13 +32,13 @@ Record-keeping repository for Leonardo's daily skill-builder curriculum, coverin
 **Hypothesis Study → Run Sheets → Weekly Report → Learning Log → source session.** Each run sheet carries the four statutory phases (hypothesis → experiment → observation/evaluation → conclusion) and names the study it feeds; `CONTROL-REGISTER.md` holds the full traceability matrix.
 
 ## Coverage
-Thirty-six scheduled runs (29 May – 5 July 2026): **33 genuine lessons**, **2 non-productive** (RUN-004 advisory, RUN-009 null API error), **1 partial** (RUN-006). Null/partial runs are recorded, not omitted. *Weeks 04–05 re-taught foundations in all 14 sessions (prior-run detection failure). Week-06 (29 Jun–5 Jul) split: RUN-034 (2 Jul) is the first session to detect its history and advance the curriculum (R&D metrics); the other five week-06 sessions repeated foundations — see `CONTROL-REGISTER.md` §4 and the weekly syntheses.*
+Forty-three scheduled runs (29 May – 12 July 2026): **40 genuine lessons**, **2 non-productive** (RUN-004 advisory, RUN-009 null API error), **1 partial** (RUN-006). Null/partial runs are recorded, not omitted. *Weeks 04–05 re-taught foundations in all 14 sessions. Week-06 split: RUN-034 (2 Jul) is the only session to detect its history and advance (R&D metrics). Week-07 (6–12 Jul, complete 7-session week) fully regressed — 5 ALCOA+ repeats + portfolio + Stage-Gate, two partial detections, no advance — see `CONTROL-REGISTER.md` §4 and the weekly syntheses.*
 
 ## Regulatory basis
 The record structure is aligned to **ITAA 1997 ss 355-25 / 355-30** and AusIndustry's *Guide to Interpretation* and *Software-related activities* guide; substantiation/retention reflects **ITAA 1936 s 262A**. See `docs/compliance-mapping.md`. Format alignment does not assert the learning activity is itself eligible R&D — that is a separate, facts-based assessment. Not tax or legal advice.
 
 ## Provenance & integrity
-Reconstructive compilation built 2026-06-15 from verified session transcripts — openly flagged, not backdated; weeks 04–06 (RUN-017…036) filed reconstructively at the 2026-06-22, 2026-06-30 and 2026-07-06 audits. Stated + weekday-correct dates: 29 May, 8/13/14/15/16/22/25/26/28/30 Jun, 2 Jul; RUN-022 states 20 Jun but mislabels the weekday; RUN-026 states 24 Jun without a weekday; all others inferred (±1 day; apparent gaps 12 Jun and one indeterminable day in 3–5 Jul — the previously flagged 29 Jun gap is corrected: RUN-031 fills it). SHA-256 hashes in `run-sheets/INDEX.md`; git history and the bundle are the immutable trail. Going forward, filing each run sheet on its own session day makes the chain fully contemporaneous.
+Reconstructive compilation built 2026-06-15 from verified session transcripts — openly flagged, not backdated; weeks 04–07 (RUN-017…043) filed reconstructively at the 2026-06-22, 2026-06-30, 2026-07-06 and 2026-07-13 audits. Stated + weekday-correct dates: 29 May, 8/13/14/15/16/22/25/26/28/30 Jun, 2/7 Jul; RUN-022 states 20 Jun but mislabels the weekday; RUN-026 states 24 Jun without a weekday; all others inferred (±1 day; apparent gaps 12 Jun and one indeterminable day in 3–5 Jul — the previously flagged 29 Jun gap is corrected: RUN-031 fills it). SHA-256 hashes in `run-sheets/INDEX.md`; git history and the bundle are the immutable trail. Going forward, filing each run sheet on its own session day makes the chain fully contemporaneous.
 
 ## System: Skills Bot + AI Agent + Application
 Beyond the records, this repo ships the automation that keeps them current and inspection-ready:

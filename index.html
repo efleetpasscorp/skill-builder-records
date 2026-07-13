@@ -45,7 +45,7 @@ code{background:#22303f;padding:1px 5px;border-radius:4px;font-size:11px}
 <body>
 <header>
  <h1>R&amp;D Skill-Builder Dashboard</h1>
- <div class="tag">Live view of Leonardo's daily skill-builder curriculum — R&amp;D Management &amp; Contemporaneous Records — managed as an Agile hypothesis pipeline and kept inspection-ready under ITAA 1997 s 355-25. Snapshot 2026-06-30; last automated audit 2026-06-30 (RUN-024…030 added, 22–28 Jun; all foundational repeats — prior-run detection failed in all 7, third week running). Source of record: the <a href="https://github.com/efleetpasscorp/skill-builder-records" target="_blank" rel="noopener">skill-builder-records</a> repository.</div>
+ <div class="tag">Live view of Leonardo's daily skill-builder curriculum — R&amp;D Management &amp; Contemporaneous Records — managed as an Agile hypothesis pipeline and kept inspection-ready under ITAA 1997 s 355-25. Snapshot 2026-07-13; last automated audit 2026-07-13 (RUN-037…043 added, 6–12 Jul; complete 7-session week — all foundational repeats, full regression after RUN-034, prior-run detection persisted in none). Source of record: the <a href="https://github.com/efleetpasscorp/skill-builder-records" target="_blank" rel="noopener">skill-builder-records</a> repository.</div>
 </header>
 <nav id="nav"></nav>
 <main id="main"></main>
@@ -87,11 +87,18 @@ const S=[
  {id:'RUN-034',d:'2026-07-02',ds:'stated',t:'RD',sub:'R&D metrics (Stevens) — NEW, first advance ★',f:'Compare-and-contrast',st:'Genuine',hs:'HS-2026-03',wk:6},
  {id:'RUN-035',d:'2026-07-03',ds:'inferred',t:'RD',sub:'Portfolio fundamentals — three goals',f:'Lesson + reflection',st:'Genuine',hs:'HS-2026-03',wk:6},
  {id:'RUN-036',d:'2026-07-05',ds:'inferred',t:'RD',sub:'Portfolio — four goals & silting',f:'Lesson + reflection',st:'Genuine',hs:'HS-2026-03',wk:6},
+ {id:'RUN-037',d:'2026-07-06',ds:'inferred',t:'CR',sub:'Evidentiary weight of contemporaneity + ALCOA+',f:'Concept + record critique',st:'Genuine',hs:'HS-2026-01',wk:7},
+ {id:'RUN-038',d:'2026-07-07',ds:'stated',t:'RD',sub:'Portfolio — Cooper 3 goals + bubble diagram',f:'Lesson + reflection',st:'Genuine',hs:'HS-2026-03',wk:7},
+ {id:'RUN-039',d:'2026-07-08',ds:'inferred',t:'RD',sub:'Stage-Gate & discovery-vs-delivery',f:'Concept + reflection',st:'Genuine',hs:'HS-2026-03',wk:7},
+ {id:'RUN-040',d:'2026-07-09',ds:'inferred',t:'CR',sub:'ALCOA+ via bad-vs-good lab entry',f:'Side-by-side dissection',st:'Genuine',hs:'HS-2026-01',wk:7},
+ {id:'RUN-041',d:'2026-07-10',ds:'inferred',t:'CR',sub:'ALCOA+ foundational + dissect the bad record',f:'Concept + dissection',st:'Genuine',hs:'HS-2026-01',wk:7},
+ {id:'RUN-042',d:'2026-07-11',ds:'inferred',t:'CR',sub:'What "contemporaneous" means + eng-log rewrite',f:'Concept + rewrite',st:'Genuine',hs:'HS-2026-01',wk:7},
+ {id:'RUN-043',d:'2026-07-12',ds:'inferred',t:'CR',sub:'ALCOA+ framework + dissected assay example',f:'Concept + example',st:'Genuine',hs:'HS-2026-01',wk:7},
 ];
 const HS={
- 'HS-2026-01':{c:'var(--hs1)',name:'Data integrity & contemporaneity (ALCOA+)',track:'CR',status:'Open — confirmed; acutely repetitive (15 sessions)',next:'Open new study on 21 CFR Part 11 audit-trail mechanics & chain-of-custody (RUN-033 was the ~15th ALCOA+ repeat)'},
- 'HS-2026-02':{c:'var(--hs2)',name:'Legal & evidentiary defensibility',track:'CR',status:'Open — early; starved (no new sessions wk-03…wk-06)',next:'Add chain-of-custody, litigation hold, inventorship-in-dispute (untouched 4 weeks)'},
- 'HS-2026-03':{c:'var(--hs3)',name:'R&D portfolio & stage-gate governance',track:'RD',status:'Open — developing (17 sessions); first advance at RUN-034 (R&D metrics)',next:'R&D metrics DONE (RUN-034). Add roadmapping, managing scientists, IP strategy; other wk-06 RD sessions were repeats'},
+ 'HS-2026-01':{c:'var(--hs1)',name:'Data integrity & contemporaneity (ALCOA+)',track:'CR',status:'Open — confirmed; acutely repetitive (20 sessions)',next:'Open new study on 21 CFR Part 11 audit-trail mechanics & chain-of-custody (all 5 week-07 CR sessions were ALCOA+ repeats — now ~20×)'},
+ 'HS-2026-02':{c:'var(--hs2)',name:'Legal & evidentiary defensibility',track:'CR',status:'Open — early; starved (no new sessions wk-03…wk-07)',next:'Add chain-of-custody, litigation hold, inventorship-in-dispute (untouched 5 weeks)'},
+ 'HS-2026-03':{c:'var(--hs3)',name:'R&D portfolio & stage-gate governance',track:'RD',status:'Open — developing (19 sessions); one advance at RUN-034 (R&D metrics)',next:'R&D metrics DONE (RUN-034). Add roadmapping, managing scientists, IP strategy; wk-07 RD sessions (RUN-038/039) were repeats'},
 };
 const COMP=[
  ['Systematic progression: hypothesis→experiment→observation/evaluation→conclusion','ITAA 1997 s 355-25(1)(a)(ii)','Four-phase block on every run sheet & study'],
@@ -102,7 +109,7 @@ const COMP=[
  ['Keep records to substantiate (retention, contemporaneity)','ITAA 1936 s 262A; AusIndustry Guide Tables 1&2','Dated run sheets, SHA-256 hashes, git history, bundle'],
  ['Annual registration within 10 months of year-end','Industry Research and Development Act 1986','Process note for any real claim'],
 ];
-const KPI=[['36','Scheduled runs'],['33','Genuine lessons'],['3','Hypothesis studies'],['6','Sprints (weeks)'],['2','Null/advisory'],['1','Partial']];
+const KPI=[['43','Scheduled runs'],['40','Genuine lessons'],['3','Hypothesis studies'],['7','Sprints (weeks)'],['2','Null/advisory'],['1','Partial']];
 
 const tabs=['Overview','Curriculum','Hypothesis Studies','Task Board','Compliance','Connectors','Architecture','Integrity'];
 let cur='Overview';
@@ -119,7 +126,7 @@ function render(){
    h+='<div class="kpis">'+KPI.map(k=>`<div class="kpi"><div class="n">${k[0]}</div><div class="l">${k[1]}</div></div>`).join('')+'</div>';
    const crN=S.filter(s=>s.t==='CR').length, rdN=S.filter(s=>s.t==='RD').length;
    h+='<div class="panel"><h2>Coverage by track</h2>'+bars([['Contemporaneous Records',crN,23,'var(--cr)'],['R&D Management',rdN,23,'var(--rd)'],['Non-productive',3,23,'#5e6c84']])+'<div class="foot">Both tracks are now foundation-heavy. Week-04 added 7 genuine sessions but all re-taught foundations (prior-run detection failed in every one). Forward backlog prioritises advanced/applied subtopics, not more foundations.</div></div>';
-   const v=[1,2,3,4,5,6].map(w=>['Sprint week-0'+w,S.filter(s=>s.wk===w&&s.st==='Genuine').length,7,'var(--ok)']);
+   const v=[1,2,3,4,5,6,7].map(w=>['Sprint week-0'+w,S.filter(s=>s.wk===w&&s.st==='Genuine').length,7,'var(--ok)']);
    h+='<div class="panel"><h2>Sprint velocity (genuine lessons / week)</h2>'+bars(v)+'<div class="foot">week-04 and week-05 both hit 7, but marginal learning was near zero — volume ≠ progression for a third straight week.</div></div>';
    h+='<div class="panel"><h2>Hypothesis studies (epics)</h2><table><tr><th>Study</th><th>Title</th><th>Track</th><th>Status</th></tr>'+Object.entries(HS).map(([k,e])=>`<tr><td><span class="lab" style="background:${e.c}"></span><b>${k}</b></td><td>${e.name}</td><td>${trackPill(e.track)}</td><td class="muted">${e.status}</td></tr>`).join('')+'</table></div>';
  }
@@ -151,7 +158,7 @@ function render(){
  }
  else if(cur==='Integrity'){
    h+='<div class="panel"><h2>Provenance & integrity</h2><div class="foot" style="font-size:13px">'+
-   '• Reconstructive compilation built 2026-06-15 from verified session transcripts — openly flagged, not backdated. Weeks 04–06 (RUN-017…036) filed reconstructively at the 2026-06-22, 2026-06-30 and 2026-07-06 audits.<br>'+
+   '• Reconstructive compilation built 2026-06-15 from verified session transcripts — openly flagged, not backdated. Weeks 04–07 (RUN-017…043) filed reconstructively at the 2026-06-22, 2026-06-30, 2026-07-06 and 2026-07-13 audits.<br>'+
    '• Weekly automated audit: 1st run 2026-06-15 (no new sessions); 2nd 2026-06-22 added RUN-017…023; 3rd 2026-06-30 added RUN-024…030 (22–28 Jun). No ATO change (QC107004, 30 May 2026 — re-fetched) — see CONTROL-REGISTER §6.<br>'+
    '• 23 runs documented: 20 genuine, 1 partial (RUN-006), 2 non-productive (RUN-004 advisory, RUN-009 null API error). Nothing omitted.<br>'+
    '• Dating: stated + weekday-correct for RUN-001/011/015/016/017/018; RUN-022 states 20 Jun but mislabels weekday; all others inferred (±1 day); apparent gap 12 Jun.<br>'+
