@@ -356,3 +356,100 @@
 **Integrity:** SHA-256 manifest recomputed for all files (now **43 runs**). This audit verified the 7 new run sheets against their freshly computed hashes; pre-existing files re-hashed and compared to the 2026-07-06 manifest — all previously recorded files unchanged (note: files this audit edits were re-hashed after editing, consistent with the standing scope caveat). Traceability (43 runs → 3 studies → 7 weekly reports → sources) re-checked.
 **Weekly report:** week-07 (6–12 Jul) added — complete 7-session week.
 **Next:** Remediation remains unactioned at source. RUN-034 (2 Jul) is still the only session to have advanced the curriculum; the week after it fully regressed. **Human action recommended:** point the daily generator at THIS repository (CONTROL-REGISTER.md + curriculum/curriculum-map.md) — not list_sessions or per-session outputs — before generating. Escalated again for Inspector/Auditor attention. Next genuine session becomes RUN-044.
+
+## 2026-07-13 — CR: ALCOA+ foundation — contemporaneity as system design  [RUN-044] *(stated; "Monday, July 13" — weekday-correct)*
+**Objective:** ALCOA+ is the load-bearing foundation under all record-keeping, so start there.
+**Activity:** Nine attributes; end-of-shift batch-record completion dissected attribute-by-attribute.
+**Observation/Evaluation:** Contemporaneity is a system-design property, not a discipline problem.
+**Conclusion:** Confirmed (foundational). ~21st ALCOA+ pass. **Detection: failed** — "no prior run history was available in this session to diff against".
+**Next:** (stated) Where is the gap between work happening and being recorded?
+
+## 2026-07-14 — CR: ALCOA+ + the GDP correction convention  [RUN-045] *(stated; "Tuesday, July 14"; example dated 14-Jul-2026)*
+**Objective:** Start at the foundation of the records track.
+**Activity:** ALCOA+ list; weak vs strong correction of a misread pH (single line through, initial, date, reason).
+**Observation/Evaluation:** Visible, well-annotated corrections are a trust signal, not an embarrassment.
+**Conclusion:** Confirmed (foundational). ~22nd pass; correction convention is the only marginal addition. **Detection: failed.**
+**Next:** (stated) Score one real record against ALCOA.
+
+## 2026-07-15 — CR: Conception vs reduction to practice (CRISPR interference)  [RUN-046] *(stated; "Wednesday, July 15" — weekday-correct)*
+**Objective:** Priority turns on dated, corroborated evidence — not on who had the idea first.
+**Activity:** Broad v. UC Berkeley PTAB interference narrative; five lessons on notebook dating, corroboration, inventorship evidence.
+**Observation/Evaluation:** A brilliant idea with no dated proof is worth little.
+**Conclusion:** Confirmed. **Substantive advance — first HS-2026-02 session in five weeks**; clears the "inventorship-in-dispute" backlog card. **Detection: failed** as a mechanism ("No prior-run state was accessible…") — the advance was coincidental, not controlled.
+**Next:** (stated) What's the earliest dated, independently corroborated record we could produce?
+
+## 2026-07-16 — CR: ALCOA+ foundation; completeness including failures  [RUN-047] *(inferred; two internal example timestamps dated 2026-07-16)*
+**Objective:** Start the Contemporaneous Records track at the foundation.
+**Activity:** Nine attributes; weak vs strong assay entry with witness line.
+**Observation/Evaluation:** A record that only shows successes is the one an auditor trusts least.
+**Conclusion:** Confirmed (foundational). ~23rd pass. **Detection: failed.** **Prompt drift noted:** the `<run-summary>` instruction present in RUN-044…046 is absent from this run onward, and no run summary was produced.
+**Next:** (stated) Score last week's entry against the nine criteria.
+
+## 2026-07-17 — RD: Portfolio as a capacity-constrained allocation problem  [RUN-048] *(inferred ±1 — no stated or example date)*
+**Objective:** Start at the foundation: how you decide what to work on.
+**Activity:** Cooper's three goals; innovation ambition matrix; "everything is P1" pipeline (22 projects / 40 engineers) dissected.
+**Observation/Evaluation:** A portfolio isn't a list of good ideas — it's a capacity-constrained allocation problem.
+**Conclusion:** Confirmed (foundational). 10th portfolio foundation. **Detection: failed** — "Since this is the opening session…".
+**Next:** (stated) Switch to Contemporaneous Records tomorrow — which did not happen until 20 Jul (18–19 Jul have no sessions).
+
+## 2026-07-20 — CR: Witnessing & corroboration — patent vs GxP regimes  [RUN-049] *(inferred ±1 — no stated or example date; first session after the 18–19 Jul gap)*
+**Objective:** Why does a second signature carry evidentiary weight — and when does it carry almost none?
+**Activity:** Patent witnessing (Price v. Symsek; post-AIA) vs GxP second-person verification (21 CFR Part 11; EU Annex 11); contrast table; git commits and R&DTI application.
+**Observation/Evaluation:** A GxP second-person verification does not automatically satisfy patent corroboration.
+**Conclusion:** Confirmed. **Substantive advance (HS-2026-02).** **Detection: failed, with a false continuity claim** — no tool calls at all, yet opened "Yesterday's lab notebook was signed by the inventor"; the actual preceding session (RUN-048) was an R&D portfolio lesson. Recorded so the rhetorical continuity is not mistaken for detection.
+**Next:** (stated) What independent artefact proves when/by whom a decision was made?
+
+## 2026-07-21 — CR: Retrospective reconstruction / the "recreated record" trap  [RUN-050] *(inferred; corroborated by the in-guidance label "Reconstructed 21 July 2026…")*
+**Objective:** An accurate but reconstructed record still fails — evidentiary value comes from the conditions of creation.
+**Activity:** Brown v. Barbacid framing; four failure modes (tidy-up, outcome-informed hypothesis, consolidated entry, helpful edit); FRE 803(6) / Evidence Act 1995 (Cth) s 69; label-as-reconstructed rule; four-question self-check.
+**Observation/Evaluation:** The evidentiary value of a record is not its content — it's the conditions of its creation.
+**Conclusion:** Confirmed. **Substantive advance (HS-2026-02).** **Detection: failed** — no tool calls, no repository read. *Reflexive note:* this lesson's own standard is what RUN-044…055 comply with by labelling every sheet as reconstructive.
+**Next:** (stated) Write one decision entry before you know whether it was right.
+
+## 2026-07-22 — CR: ALCOA+ foundation + scored practice exercise  [RUN-051] *(inferred ±1 — no stated or example date)*
+**Objective:** Start at the foundation the rest of the curriculum will build on.
+**Activity:** ALCOA+ explained; learner scores a defective undated "Page 47" entry; model answer.
+**Observation/Evaluation:** Contemporaneous + Original act together — a record's value decays with the gap between event and capture.
+**Conclusion:** Confirmed (foundational). ~24th pass. **Detection: failed** (one bash call made, no evidence of a prior-state read; still declared itself the opening session).
+**Next:** (stated) Defensible-notebook mechanics, or 21 CFR Part 11 audit trails — i.e. the session named the exact backlog card the register has been asking for, then did not act on it.
+
+## 2026-07-23 — CR: ALCOA+ bedrock; the "write it up later" instinct  [RUN-052] *(stated; "Thursday, July 23, 2026" — weekday-correct; example dated 23 Jul)*
+**Objective:** Start at the bedrock — ALCOA+ as the reliability standard.
+**Activity:** ALCOA+ table; Post-it-to-logbook entry failed attribute-by-attribute.
+**Observation/Evaluation:** The enemy of contemporaneous records is almost never dishonesty — it's "I'll write it up properly later".
+**Conclusion:** Confirmed (foundational). ~25th pass. **Detection: PARTIAL** — the only session this fortnight to explicitly try ("I'll check for any prior lesson log to avoid repeating topics"), but it wrote its progression log to its own session outputs, so RUN-053 the next day could not see it. Right instinct, wrong location (same as RUN-036, RUN-055).
+**Next:** (stated) Discipline problem or system problem?
+
+## 2026-07-24 — CR: The four load-bearing properties  [RUN-053] *(inferred ±1 — no stated date; the "12 March" example date is fictional and does not corroborate)*
+**Objective:** Set the foundation the rest of the curriculum builds on.
+**Activity:** Four-property re-cut of ALCOA+; Version A (Word doc) vs Version B (bound notebook) dissected; cites 21 CFR Part 11, ISO 9001 §7.5.3, ITAA 1997 s 355-25.
+**Observation/Evaluation:** The properties are multiplicative, not additive — zero times anything is zero; separate observation from interpretation.
+**Conclusion:** Confirmed (foundational). Re-run of RUN-028's framing; the s 355-25 citation is the only addition. **Detection: failed** — ran the day after RUN-052 created a progression log it could not see, because that log was session-local.
+**Next:** (stated) Score one of this week's records on the four properties.
+
+## 2026-07-25 — RD: Stage-Gate economics — gates as options  [RUN-054] *(stated; "25 July 2026"; Saturday, no weekday asserted)*
+**Objective:** Stage-Gate is fundamentally an answer to an economic asymmetry.
+**Activity:** Cooper / NewProd background; gates as real options; funnel scenario (11 in, 2 killed at Gate 4) to diagnose.
+**Observation/Evaluation:** A funnel that has collapsed into a tunnel — the expensive failure is the late kill, not the kill itself.
+**Conclusion:** Confirmed (foundational). 8th stage-gate foundation. **Detection: failed** — "this is the opening session of the curriculum… I have no record of a prior day".
+**Next:** (stated) At which gate do most kills happen, and how much was already spent?
+
+## 2026-07-26 — CR: ALCOA+ attribute set + Entry A vs Entry B  [RUN-055] *(stated; "Sunday 26 July 2026" — weekday-correct)*
+**Objective:** The industry-standard answer to "what makes a record reliable?" is ALCOA.
+**Activity:** ALCOA+ table with failure modes; three reasons contemporaneity carries weight (FRE 803(6); Evidence Act 1995 (Cth) s 69); camera-rig calibration Entry A vs Entry B dissected.
+**Observation/Evaluation:** If your documentation practice only pays off when someone asks for it, it will always feel like overhead and will always slip.
+**Conclusion:** Confirmed (foundational). ~27th pass — sixth from-scratch ALCOA+ restart in this fortnight. **Detection: PARTIAL** — started a progression log, but session-local (`skill-builder-log.md`), and treated itself as the origin.
+**Next:** (stated) "R&D Management foundations (Cooper's three portfolio goals)" — itself already covered at RUN-038 and RUN-048.
+
+---
+
+## 2026-07-27 — AUTOMATED COMPLIANCE AUDIT (Skills Bot, weekly) — 12 new sessions logged, covering TWO weeks
+**Type:** Maintenance/audit run, *not* an R&D learning lesson. Filed 2026-07-27 (reconstructive — sessions are 13–26 Jul, filed 14–1 days after activity, not same-day).
+**Audit-cadence exception (disclosed):** the previous audit ran 2026-07-13. **No audit was run on 2026-07-20** — there is no learning-log or control-register entry for that date and none was found. This run therefore covers a fourteen-day period (two sprints, week-08 and week-09) rather than the usual seven. The missed audit is recorded here rather than papered over; it is the reason RUN-044…048 carry an 11–14 day filing lag.
+**Regulatory refresh:** Re-checked ato.gov.au QC107004 by WebSearch **and** full `web_fetch`. *Instructions to complete the R&D tax incentive schedule 2026* — page still **"Last updated 30 May 2026"** (`dcterms.modified` 2026-05-29T22:22:00+00:00), QC **107004**, schedule year **2026**, Parts A–E, item 21 labels W/X, item 6 label Q / item 7 label D, the **$20,000** notional-deduction floor with RSP/CRC exceptions, TR 2021/5, TA 2023/5, ss 355-405/355-415, subdiv 355-E and Div 27 all reconfirmed on-page. Search results list 2024/2025/2026 instruction sets only — **no 2027 schedule**. `docs/ato-schedule.md` re-verification stamp added (2026-07-27). **No regulatory change.**
+**Session audit:** Twelve genuine daily learning sessions located for 13–26 Jul 2026 → RUN-044…RUN-055 (sources ddebd1b6, 86fdb18f, fdfd2ca7, 7ae61d97, 3d5ef5c1, b0a12236, ea409943, 284d037f, 92d8e5e3, 520eb010, 7e8c733e, 77968610). All genuine; **no null, partial or advisory runs** this period. Stated + weekday-correct: RUN-044 (Mon 13 Jul), RUN-045 (Tue 14 Jul), RUN-046 (Wed 15 Jul), RUN-052 (Thu 23 Jul), RUN-055 (Sun 26 Jul); RUN-054 stated (25 Jul) without weekday. Inferred with internal-example corroboration: RUN-047 (16 Jul), RUN-050 (21 Jul). **Inferred with no corroboration at all (±1 day, flagged on each sheet): RUN-048 (17 Jul), RUN-049 (20 Jul), RUN-051 (22 Jul), RUN-053 (24 Jul).** **Gap: 18 and 19 Jul (Sat–Sun) have no session** — the first two-day gap in the record.
+**Control finding (chronic failure, with one genuine — but uncontrolled — content gain):** Prior-run detection: **10 FAILED, 2 PARTIAL, 0 SUCCESS.** No session read this repository; none called `list_sessions` or `read_transcript`; only three made any tool call at all. RUN-052 and RUN-055 each started a progression log but wrote it to their own session-local outputs — the identical RUN-036 failure mode — so RUN-053 could not see RUN-052's log one day later. RUN-049 additionally made a **false continuity claim** ("Yesterday's lab notebook…") having read nothing. **Prompt drift detected:** the `<run-summary>` instruction present in RUN-044/045/046 disappears from RUN-047 onward and no run summaries were produced thereafter — a second, previously unrecorded control defect. *Counterweight:* three sessions (RUN-046, 049, 050) delivered genuinely new HS-2026-02 material after five starved weeks — but none did so because it detected the gap; the topic choices were independent, so this is coincidence, not control.
+**Studies:** HS-2026-01 += RUN-044, 045, 047, 051, 052, 053, 055 (now **27** — six from-scratch ALCOA+ restarts in fourteen days); **HS-2026-02 += RUN-046, 049, 050 (now 5 — reactivated after 5 starved weeks; two of three backlog cards cleared, litigation hold/spoliation remains)**; HS-2026-03 += RUN-048, 054 (now **21** — both foundational repeats). No new HS opened — the three advances land squarely inside HS-2026-02's existing master hypothesis.
+**Integrity:** **All 65 previously-recorded files verified against the 2026-07-13 manifest BEFORE any edit this run — 65/65 matched.** This clears the standing scope caveat carried since 2026-07-06; the "verify first, then edit" procedure is now the standard. Manifest recomputed for all files afterwards (now **55 runs**). Traceability (55 runs → 3 studies → 9 weekly reports → sources) re-checked.
+**Weekly reports:** week-08 (13–19 Jul, 5 sessions + 2 gap days) and week-09 (20–26 Jul, 7 sessions, complete) both added.
+**Next:** Remediation still unactioned at source, now nine weeks running. RUN-034 (2 Jul) remains the only session ever to advance by detection. **Human action recommended (unchanged and escalating):** (1) point the daily generator at THIS repository — `CONTROL-REGISTER.md` + `curriculum/curriculum-map.md` — before generating; (2) restore the `<run-summary>` instruction that dropped out of the daily prompt after 16 Jul; (3) if a session writes a progression log, it must write to this repository, not its own outputs. Next genuine session becomes RUN-056.
